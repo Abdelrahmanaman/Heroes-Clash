@@ -1,0 +1,45 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.header {
+    background-color: #252D42;
+    color: white;
+    padding: 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+}
+
+.header-img_title {
+    display: flex;
+    align-items: center !important;
+}
+
+.header-img_title-img {
+    padding-right: 50px !important;
+}
+
+.header-img_title-title {
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.header-money {
+    display: flex;
+    align-items: center;
+}
+
+.header-money-dollar {
+    padding-right: 50px !important;
+    font-weight: 900;
+    font-size: 3em;
+    font-style: italic;
+}
+
+.header-money-amount {
+    padding-right: 30px !important;
+    padding: 20px !important;
+    font-size: 1.5em;
+}
