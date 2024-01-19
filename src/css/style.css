@@ -23,7 +23,7 @@
 .header {
     background-color: #252D42;
     color: white;
-    padding: 20px !important;
+    padding: 5px 20px !important;
     display: flex;
     justify-content: space-between;
     align-items: center !important;
@@ -37,7 +37,7 @@
 
 .header-img_title-img {
     padding-right: 50px !important;
-    height: 90px;
+    height: 60px;
     transition: all 1000ms ease;
 }
 
@@ -62,7 +62,7 @@
 
 .header-money-amount {
     padding-right: 30px !important;
-    padding: 20px !important;
+    padding: 0 20px !important;
     font-size: 1.5em;
     transition: all 1000ms ease;
 }
@@ -111,12 +111,13 @@
 .roundTitle {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px !important;
 }
 
 .roundTitle-title {
     color: white;
     font-family: Bebas Neue;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 3px #252D42;
     font-size: 4em;
 }
 
