@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
 * {
     margin: 0 !important;
     padding: 0 !important;
 }
 
+.fullscreen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container-main {
+    background-image: url("../../assets/img/img_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+/*****************     HEADER     *****************/
 .header {
     background-color: #252D42;
     color: white;
@@ -10,6 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center !important;
+    font-family: Bebas Neue;
 }
 
 .header-img_title {
@@ -19,11 +37,14 @@
 
 .header-img_title-img {
     padding-right: 50px !important;
+    height: 90px;
+    transition: all 1000ms ease;
 }
 
 .header-img_title-title {
     font-weight: 900;
     font-size: 3em;
+    transition: all 1000ms ease;
 }
 
 .header-money {
@@ -32,16 +53,245 @@
 }
 
 .header-money-dollar {
-    padding-right: 50px !important;
+    padding-right: 20px !important;
     font-weight: 900;
     font-size: 3em;
     font-style: italic;
+    transition: all 1000ms ease;
 }
 
 .header-money-amount {
     padding-right: 30px !important;
     padding: 20px !important;
     font-size: 1.5em;
+    transition: all 1000ms ease;
+}
+
+
+/*****************     MAIN     *****************/
+/************************************************/
+
+
+/*****************     ZONE DE COMPTAGE DES POINTS     *****************/
+.roundCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aliceblue; */
+    height: 60px;
+    margin-top: 20px !important;
+}
+
+.rounds-players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:aquamarine; */
+    height: 50px;
+    width: 200px; 
+}
+
+.rounds-player1 {
+    margin-left: 60px !important;
+}
+
+.rounds-player2 {
+    margin-right: 60px !important;
+}
+
+.round-player {
+    height: 45px;
+    width: 45px;
+    border: 2px solid white;
+    border-radius: 50%; 
+    margin: 10px !important;
+
+}
+
+.roundTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.roundTitle-title {
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: #252D42;
+    font-size: 4em;
+}
+
+.fight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fight-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #252D42;
+    border-radius: 20px;
+}
+
+.fight-player1 {
+    margin-left: 300px !important;
+}
+
+.fight-player2 {
+    margin-right: 300px !important;
+}
+.fight-player-img {
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.fight-player-powerStats {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+#powerStats-select {
+    color: #252D42;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#btnFight {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#btnFight:hover {
+    color: white;
+    background-color: #252D42;
+    border: 2px solid white;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
+
+
+
+
+
+
+
+
+
+/*****************     MEDIA QUERIES     *****************/
+@media screen and (max-width: 1000px) {
+    .header-img_title-title {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 85px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.4em;
+        transition: all 1000ms ease;
+    }   
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        padding: 15px !important;
+    }
+    
+    
+    .header-img_title-title {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 75px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.3em;
+        transition: all 1000ms ease;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    .header-img_title-title {
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 30px !important;
+        height: 65px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 10px !important;
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 10px !important;
+    }
+    
+    .header-img_title-title {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 20px !important;
+        height: 50px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 5px !important;
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1em;
+        transition: all 1000ms ease;
+    } 
 }
 
 
