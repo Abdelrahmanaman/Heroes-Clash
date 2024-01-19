@@ -16,7 +16,6 @@ let durability = document.getElementById("durability")
 let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
-// const imgHeroes = document.querySelectorAll("#superhero-Img")
 
 console.log("test")
 //* fetching the Api function 
@@ -49,17 +48,17 @@ async function getSuperheroes() {
         });
 
         //* Pushing the heroes API OBJECT REUSE 
-        // superheroData.push(resp);
+        superheroData.push(resp);
   
   
       }
       //* Generating a random Img and intailizing the game *//
-      // bet.addEventListener("click", function () {
-      //   const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
-      //   const randomHero = superheroData[randomHeroIndex];
-      //   compTest.src = randomHero.image.url;
-      //   console.log(superheroData)
-      // });
+      bet.addEventListener("click", function () {
+        const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
+        const randomHero = superheroData[randomHeroIndex];
+        compTest.src = randomHero.image.url;
+        console.log(superheroData)
+      });
     } catch (error) {
       // console.error(`Error: ${error}`);
     }
