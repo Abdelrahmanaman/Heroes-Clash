@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.fullscreen {
+    /* height: 100vh; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+.container-main {
+    background-image: url("../../assets/img/img_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    padding-bottom: 100px !important;
+}
+
+/**************************************************/
+/*****************     HEADER     *****************/
+/**************************************************/
+.header {
+    background-color: #252D42;
+    color: white;
+    padding: 5px 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    font-family: Bebas Neue;
+}
+
+.header-img_title {
+    display: flex;
+    align-items: center !important;
+}
+
+.header-img_title-img {
+    padding-right: 50px !important;
+    height: 60px;
+    transition: all 1000ms ease;
+}
+
+.header-img_title-title {
+    font-weight: 900;
+    font-size: 3em;
+    transition: all 1000ms ease;
+}
+
+.header-money {
+    display: flex;
+    align-items: center;
+}
+
+.header-money-dollar {
+    padding-right: 20px !important;
+    font-weight: 900;
+    font-size: 3em;
+    font-style: italic;
+    transition: all 1000ms ease;
+}
+
+.header-money-amount {
+    padding-right: 30px !important;
+    padding: 0 20px !important;
+    font-size: 1.5em;
+    transition: all 1000ms ease;
+}
+
+/*****************     HEADER MEDIA QUERIES    *****************/
+@media screen and (max-width: 1000px) {
+    .header-img_title-title {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 85px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.4em;
+        transition: all 1000ms ease;
+    }   
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        padding: 15px !important;
+    }
+    
+    
+    .header-img_title-title {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 75px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.3em;
+        transition: all 1000ms ease;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    .header-img_title-title {
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 30px !important;
+        height: 65px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 10px !important;
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 10px !important;
+    }
+    
+    .header-img_title-title {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 20px !important;
+        height: 50px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 5px !important;
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1em;
+        transition: all 1000ms ease;
+    } 
+}
+
+
+/**************************************************/
+/*****************     HOME     *******************/
+/**************************************************/
+
+.container-main-home {
+    background-image: url("../../assets/img/img_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    /* height: 100vh; */
+    padding-bottom: 100px !important;
+
+}
+
+.container-main-home2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 300px !important;
+
+}
+
+.play-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #fff;
+    margin-top: 75%; 
+    margin-left: 10%;
+}
+
+.play-button p {
+    margin-top: 30%; 
+    color: #fff;
+}
+
+.rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #252D42; */
+    border-radius: 20px;
+    text-align: justify;
+    margin-top: 150px !important;
+    background-color: rgba(114, 139, 169, 0.5);
+    padding: 50px 30px !important;
+    width: 300px;
+}
+
+.rules-h1 {
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 3px #252D42;
+    font-size: 3em;
+    margin-bottom: 50px !important;
+}
+
+.rules-p {
+    color: white;
+    margin-bottom: 30px !important;
+}
+
+
+/****************************************************/
+/*****************    SELECTION     *****************/
+/****************************************************/
+
+.selectedHero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px !important;
+}
+
+.selectedHero-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #252D42;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.selectedHero-player1 {
+    margin-left: 400px !important;
+    transition: all 1000ms ease;
+}
+
+.selectedHero-player2 {
+    margin-right: 400px !important;
+    transition: all 1000ms ease;
+}
+
+.selectedHero-player-img {
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.selectedHero-player-powerStats {
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1em;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.selectedHero-player2-powerStats {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectedHero-player-powerStats-list
+{
+    list-style-type: none;
+}
+
+.selectedHero-player-powerStats-liste1 {
+    padding-right: 5px;
+}
+
+.selectedHero-player-powerStats-liste2 {
+    padding-left: 5px;
+}
+
+.selectedHero-bet {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.selectedHero-VS {
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 3px #252D42;
+    font-size: 4em;
+}
+
+#bet {
+    border: 2px solid #252D42;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.betLauncher {
+    margin-top: 20px !important;
+}
+
+#btnBet {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#btnBet:hover {
+    color: white;
+    background-color: #252D42;
+    border: 2px solid white;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
+.selectionHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+.grid-heroes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 80px;
+}
+
+.grid-heroes-div-img {
+    border: 2px solid #252D42;
+    border-radius: 20px;
+}
+
+.grid-heroes-img {
+    height: 170px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+
+/*****************    MEDIA QUERIES SELECTION     *****************/
+@media screen and (max-width: 1700px) {
+    .selectedHero-player1 {
+        margin-left: 300px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 300px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .selectedHero-player1 {
+        margin-left: 250px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 250px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+
+/******************************************************/
+/*****************     GAME     ***********************/
+/******************************************************/
+
+
+/*****************    GAME - ZONE DE COMPTAGE DES POINTS     *****************/
+.roundCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-top: 20px !important;
+}
+
+.rounds-players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 200px; 
+}
+
+.rounds-player1 {
+    margin-left: 60px !important;
+}
+
+.rounds-player2 {
+    margin-right: 60px !important;
+}
+
+.round-player {
+    height: 45px;
+    width: 45px;
+    border: 2px solid white;
+    border-radius: 50%; 
+    margin: 10px !important;
+
+}
+
+.roundTitle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px !important;
+}
+
+.roundTitle-title {
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 3px #252D42;
+    font-size: 4em;
+}
+
+.fight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fight-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #252D42;
+    border-radius: 20px;
+}
+
+.fight-player1 {
+    margin-left: 300px !important;
+}
+
+.fight-player2 {
+    margin-right: 300px !important;
+}
+
+.fight-player-img {
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.fight-player-powerStats {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+#powerStats-select {
+    color: #252D42;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.fight-player2-powerStats-p {
+    background-color: white;
+    border: 1px solid #252D42;
+    border-radius: 20px;
+    font-size: 0.8em;
+    padding: 2px 10px !important;
+}
+
+
+#btnFight {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#btnFight:hover {
+    color: white;
+    background-color: #252D42;
+    border: 2px solid white;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
