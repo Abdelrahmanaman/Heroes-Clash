@@ -132,9 +132,6 @@ async function getSuperheroes() {
     
   const game = new SuperHeroGame(100);
   
-/*****************Valentin********** */
-
-  
   //     // Check if the game is over or continue to the next round
   //     if (this.wallet <= 0) {
   //       console.log("Game over. Your wallet is empty.");
@@ -145,3 +142,15 @@ async function getSuperheroes() {
   // }
   // const game = new SuperHeroGame(100);
   
+/*****************Valentin********** */
+
+const betGoValue = document.getElementById("input-bet").value 
+bet.addEventListener('click', function(){
+  console.log("Hello")
+})
+if(betGo > 100){
+
+}
+else{
+  console.log("Vous n'avez pas assez d'argent !")
+}
