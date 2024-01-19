@@ -424,6 +424,7 @@
 .grid-heroes-div-img {
     border: 2px solid #252D42;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .grid-heroes-img {
