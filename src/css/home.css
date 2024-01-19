@@ -48,6 +48,12 @@
     margin-top: 30%; 
     color: #fff;
 }
+.pllay{
+    background-color: #252D42;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
 
 .rules{
     display: flex;

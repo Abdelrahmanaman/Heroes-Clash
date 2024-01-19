@@ -17,11 +17,13 @@
     border: 3px solid #252D42;
     border-radius: 20px;
     background-color: white;
+    border: none;
 }
 
 .selectedHero-player1 {
     margin-left: 400px !important;
     transition: all 1000ms ease;
+
 }
 
 .selectedHero-player2 {
@@ -130,6 +132,15 @@
 .grid-heroes-div-img {
     border: 2px solid #252D42;
     border-radius: 20px;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+    border: none;
+}
+.grid-heroes-div-img:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 105px 45px rgba(255,255,255,1);
+    border: none;
+
 }
 
 .grid-heroes-img {
@@ -281,4 +292,28 @@
         column-gap: 10px;
         transition: all 1000ms ease;
     }
+}
+@media (max-width:800px){
+
+    .selectedHero{
+        width: 100%;
+        
+    }
+    .selectedHero-player1{
+        width:400px;
+    }
+    .grid-heroes-div-img{
+        height: 100%;
+        padding: 5rem;
+
+    }
+    .grid-heroes-div-img img{
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+    .selectedHero-player-img{
+        width: 100%;
+    }
+    
 }
