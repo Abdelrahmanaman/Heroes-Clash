@@ -56,7 +56,7 @@ async function getSuperheroes() {
       bet.addEventListener("click", function () {
         const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
         const randomHero = superheroData[randomHeroIndex];
-        compTest.src = randomHero.image.url;
+        compDisplay.src = randomHero.image.url;
         console.log(superheroData)
       });
     } catch (error) {
