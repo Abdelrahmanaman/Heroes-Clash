@@ -1,0 +1,11 @@
+Creating a logic behind the game 
+-How will the game intialize upon betting?
+-Creating a bullet progress for the rounds 
+- Creating the comparison function to determine the winner
+
+
+
+- Choose your player
+- Choose the abilitty you want to fight with
+- Bet your amount and may the best hero win
+
