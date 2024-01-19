@@ -10,6 +10,8 @@ const bet = document.getElementById("bet-btn") //*Button simulation
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
 let coin = 500
+const imgHeroes = document.querySelectorAll(".grid-heroes-div-img img")
+console.log()
 
 
 //* fetching the Api function 
