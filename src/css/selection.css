@@ -426,6 +426,13 @@
     border-radius: 20px;
     cursor: pointer;
 }
+.grid-heroes-div-img :hover{
+    border: 2px solid #252D42;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all ease-in 100ms;
+    transform: scale(1.2);
+}
 
 .grid-heroes-img {
     height: 170px;
