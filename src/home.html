@@ -1,34 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
     <link rel="stylesheet" href="/src/css/home.css">
 </head>
+
 <body>
-    <header class="d-flex align-items-center justify-content-between text-white p-3" style="height: 80px; width: 100%;">
-        <div class="d-flex align-items-center" id="logo">
-            <img class="custom-margin" src="/assets/img/the-flash-6345510_640_480.png" alt="Logo" style="max-height: 60px; max-width: 80px;">
-            <p class="mb-0 ">Heroes Clash</p>
-        </div>
-        <p class="mb-0 bank">$ 100</p>
-    </header>
-    <div class="play-button">
-        <div class="triangle"></div>
-        <p>PLAY</p>
-    </div>
-    <div class="rules d-flex justify-content-center align-items-center rules-contain">
-        <div class=" card w-auto  border-white rules text-center">
-                    <h1 class="text-white">Règles du jeu :</h1>
-                    <p class="text-white">-Le joueur dispose d’un portefeuille avec 100$.</p>
-                    <p class="text-white">-Sélection du personnage et une mise à parier</p>
-                    <p class="text-white">-Sélection d’une stat différente à chaque round</p>
-                    <p class="text-white">-Le premier joueur à avoir remporté 3 rounds au total l’emporte</p>
+    <div class="fullscreen">
+        <header>
+            <div class="header">
+                <div class="header-img_title">
+                    <a href="home.html">
+                        <img src="../assets/img/flash-white.png" alt="Logo Hereos Clash" class="header-img_title-img">
+                    </a>
+                    <p class="header-img_title-title">Heroes Clash</p>
+                </div>
+                <div class="header-money">
+                    <p class="header-money-dollar">$</p>
+                    <p class="header-money-amount">1OO</p>
                 </div>
             </div>
+        </header>   
+        <main class="container-main-home">
+            <div class="container-main-home2">
+                <div class="play-button">
+                    <a href="selection_dav.html">
+                        <div class="triangle"></div>
+                            <p>PLAY</p>
+                        </div>
+                    </a>
+                <div class="rules-container">
+                    <div class="rules">
+                        <h1 class="rules-h1">Règles du jeu</h1>
+                        <p class="rules-p">Le joueur dispose d’un portefeuille avec 100$.</p>
+                        <p class="rules-p">Sélection du personnage et une mise à parier</p>
+                        <p class="rules-p">Sélection d’une stat différente à chaque round</p>
+                        <p class="rules-p">Le premier joueur à avoir remporté 3 rounds au total l’emporte</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     </div>
 </body>
+
 </html>

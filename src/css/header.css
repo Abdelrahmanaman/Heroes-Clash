@@ -1,0 +1,151 @@
+/**************************************************/
+/*****************     HEADER     *****************/
+/**************************************************/
+.header {
+    background-color: #252D42;
+    color: white;
+    padding: 5px 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    font-family: Bebas Neue;
+}
+
+.header-img_title {
+    display: flex;
+    align-items: center !important;
+}
+
+.header-img_title-img {
+    padding-right: 50px !important;
+    height: 60px;
+    transition: all 1000ms ease;
+}
+
+.header-img_title-title {
+    font-weight: 900;
+    font-size: 3em;
+    transition: all 1000ms ease;
+}
+
+.header-money {
+    display: flex;
+    align-items: center;
+}
+
+.header-money-dollar {
+    padding-right: 20px !important;
+    font-weight: 900;
+    font-size: 3em;
+    font-style: italic;
+    transition: all 1000ms ease;
+}
+
+.header-money-amount {
+    padding-right: 30px !important;
+    padding: 0 20px !important;
+    font-size: 1.5em;
+    transition: all 1000ms ease;
+}
+
+/*****************     HEADER MEDIA QUERIES    *****************/
+@media screen and (max-width: 1000px) {
+    .header-img_title-title {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 85px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.4em;
+        transition: all 1000ms ease;
+    }   
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        padding: 15px !important;
+    }
+    
+    
+    .header-img_title-title {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 75px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.3em;
+        transition: all 1000ms ease;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    .header-img_title-title {
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 30px !important;
+        height: 65px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 10px !important;
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 10px !important;
+    }
+    
+    .header-img_title-title {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 20px !important;
+        height: 50px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 5px !important;
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1em;
+        transition: all 1000ms ease;
+    } 
+}
