@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,8 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="../assets/img/flash-black.ico" type="image/x-icon">
     <!-- lien css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style_dav.css">
+    <link rel="stylesheet" href="css/selection.css">
     <!-- lien pour utilisation bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -21,16 +19,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="header-img_title"> 
-                <img src="../assets/img/flash-white.png" alt="Logo Hereos Clash" class="header-img_title-img"> 
-                <p class="header-img_title-title">Heroes Clash</p>
     <div class="fullscreen">
         <header>
             <div class="header">
                 <div class="header-img_title">
-                    <img src="../assets/img/flash-white.png" alt="Logo Hereos Clash" class="header-img_title-img">
+                    <img src="/assets/img/the-flash-6345510_640_480.png" alt="Logo Hereos Clash" class="header-img_title-img">
                     <p class="header-img_title-title">Heroes Clash</p>
                 </div>
                 <div class="header-money">
@@ -38,59 +31,79 @@
                     <p class="header-money-amount">1OO</p>
                 </div>
             </div>
-            <div class="header-money">
-                <p class="header-money-dollar">$</p> 
-                <p class="header-money-amount">1OO</p>
         </header>
         <main class="container-main">
-            <div class="roundCount">
-                <div class="rounds-players rounds-player1">
-                    <div class="round-player round1-player1">
-                    </div>
-                    <div class="round-player round2-player1">
-                    </div>
-                    <div class="round-player round3-player1">
-                    </div>
-                </div>
-                <div class="rounds-players rounds-player2">
-                    <div class="round-player round1-player2">
-                    </div>
-                    <div class="round-player round2-player2">
-                    </div>
-                    <div class="round-player round3-player2">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-            <div class="roundTitle">
-                <h1 class="roundTitle-title">ROUND 1</h1>
-            </div>
-            <div class="fight">
-                <div class="fight-player fight-player1">
-                    <img class="fight-player-img fight-player1-img" src="../assets/img/captain.jpg"
+            <div class="selectedHero">
+                <div class="selectedHero-player selectedHero-player1">
+                    <img class="selectedHero-player-img selectedHero-player1-img" src="../assets/img/captain.jpg"
                         alt="Image Captain America" />
-                    <div class="fight-player-powerStats fight-player1-powerStats">
-                        <select name="powerStats" id="powerStats-select">
-                            <option value="">--Please choose a PowerStats--</option>
-                            <option value="intelligence">Intelligence</option>
-                            <option value="strength">Strength</option>
-                            <option value="speed">Speed</option>
-                            <option value="durability">Durability</option>
-                            <option value="power">Power</option>
-                            <option value="combat">Combat</option>
-                        </select>
+                    <div class="selectedHero-player-powerStats selectedHero-player1-powerStats">
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste1">
+                            <li id="intelligence">Intelligence : 200</li>
+                            <li id="strength">Strength : 100</li>
+                            <li id="speed">Speed : 200</li>
+                        </ul>
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste2">
+                            <li id="durability">Durability : 800</li>
+                            <li id="power">Power : 1000</li>
+                            <li id="combat">Combat : 500</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="fight-launcher">
-                    <button id="btnFight" onclick="">!! FIGHT !!</button>
+                <div class="selectedHero-bet">
+                    <p class="selectedHero-VS">VS</p>
+                    <input type="number" id="bet" placeholder="BET !">
+                    <div class="betLauncher">
+                        <button id="btnBet" onclick="">!! BET !!</button>
+                    </div>
                 </div>
-                <div class="fight-player fight-player2">
-                    <img class="fight-player-img fight-player2-img" src="../assets/img/Batman.jpg"
+                <div class="selectedHero-player selectedHero-player2">
+                    <img class="selectedHero-player-img selectedHero-player2-img" src="../assets/img/Batman.jpg"
                         alt="Image de Batman" />
-                    <div class="fight-player-powerStats fight-player2-powerStats">
-                        <p class="fight-player2-powerStats-p">PowerStats non communiquées</p>
+                    <div class="selectedHero-player-powerStats selectedHero-player2-powerStats">
+                        <p>--------</p>
+                        <p>Surprise</p>
+                        <p>--------</p>
+                    </div>
+                </div>
+            </div>
+            <div class="selectionHero">
+                <div class="grid-heroes">
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/batman.jpg" class="grid-heroes-img" alt="" id="miniature1">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/captain.jpg" class="grid-heroes-img" alt="" id="miniature2">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Doctor Doom.jpg" class="grid-heroes-img" alt="" id="miniature3">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Flash.jpg" class="grid-heroes-img" alt="" id="miniature4">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Goku.jpg" class="grid-heroes-img" alt="" id="miniature5">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Harry Potter.jpg" class="grid-heroes-img" alt="" id="miniature6">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Hulk.jpg" class="grid-heroes-img" alt="" id="miniature7">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Killuog.jpg" class="grid-heroes-img" alt="" id="miniature8">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/King Kong.jpg" class="grid-heroes-img" alt="" id="miniature9">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Naruto.jpg" class="grid-heroes-img" alt="" id="miniature10">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Superman.jpg" class="grid-heroes-img" alt="" id="miniature11">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Wolverine.jpg" class="grid-heroes-img" alt="" id="miniature12">
                     </div>
                 </div>
             </div>
