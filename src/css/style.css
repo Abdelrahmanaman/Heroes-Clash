@@ -72,7 +72,7 @@
 /************************************************/
 
 
-/*****************     ZONE DE COMPTAGE DES POINTS     *****************/
+/*****************    GAME - ZONE DE COMPTAGE DES POINTS     *****************/
 .roundCount {
     display: flex;
     justify-content: space-between;
@@ -143,6 +143,7 @@
 .fight-player2 {
     margin-right: 300px !important;
 }
+
 .fight-player-img {
     width: 350px;
     border-radius: 20px;
@@ -162,6 +163,7 @@
     padding: 20px;
     border-radius: 20px;
 }
+
 
 #btnFight {
     color: #252D42;
@@ -186,10 +188,140 @@
 
 
 
+/*****************    SELECTION     *****************/
 
+.selectedHero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px !important;
+}
 
+.selectedHero-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #252D42;
+    border-radius: 20px;
+    background-color: white;
+}
 
+.selectedHero-player1 {
+    margin-left: 400px !important;
+}
 
+.selectedHero-player2 {
+    margin-right: 400px !important;
+}
+
+.selectedHero-player-img {
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.selectedHero-player-powerStats {
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1em;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.selectedHero-player2-powerStats {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectedHero-player-powerStats-list
+{
+    list-style-type: none;
+}
+
+.selectedHero-player-powerStats-liste1 {
+    padding-right: 5px;
+}
+
+.selectedHero-player-powerStats-liste2 {
+    padding-left: 5px;
+}
+
+.selectedHero-bet {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.selectedHero-VS {
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 3px #252D42;
+    font-size: 4em;
+}
+
+#bet {
+    border: 2px solid #252D42;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.betLauncher {
+    margin-top: 20px !important;
+}
+
+#btnBet {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.5em;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#btnBet:hover {
+    color: white;
+    background-color: #252D42;
+    border: 2px solid white;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
+.selectionHero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+.grid-heroes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 80px;
+}
+
+.grid-heroes-div-img {
+    border: 2px solid #252D42;
+    border-radius: 20px;
+}
+
+.grid-heroes-img {
+    height: 170px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
 
 
 

@@ -32,52 +32,78 @@
                 </div>
             </div>
         </header>
-        <main class="container-main-selection">
-            <div class="roundCount">
-                <div class="rounds-players rounds-player1">
-                    <div class="round-player round1-player1">
-                    </div>
-                    <div class="round-player round2-player1">
-                    </div>
-                    <div class="round-player round3-player1">
-                    </div>
-                </div>
-                <div class="rounds-players rounds-player2">
-                    <div class="round-player round1-player2">
-                    </div>
-                    <div class="round-player round2-player2">
-                    </div>
-                    <div class="round-player round3-player2">
-                    </div>
-                </div>
-            </div>
-            <div class="roundTitle">
-                <h1 class="roundTitle-title">ROUND 1</h1>
-            </div>
-            <div class="fight">
-                <div class="fight-player fight-player1">
-                    <img class="fight-player-img fight-player1-img" src="../assets/img/captain.jpg"
+        <main class="container-main">
+            <div class="selectedHero">
+                <div class="selectedHero-player selectedHero-player1">
+                    <img class="selectedHero-player-img selectedHero-player1-img" src="../assets/img/captain.jpg"
                         alt="Image Captain America" />
-                    <div class="fight-player-powerStats fight-player1-powerStats">
-                        <select name="powerStats" id="powerStats-select">
-                            <option value="">--Please choose a PowerStats--</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
+                    <div class="selectedHero-player-powerStats selectedHero-player1-powerStats">
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste1">
+                            <li id="intelligence">Intelligence : 200</li>
+                            <li id="strength">Strength : 100</li>
+                            <li id="speed">Speed : 200</li>
+                        </ul>
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste2">
+                            <li id="durability">Durability : 800</li>
+                            <li id="power">Power : 1000</li>
+                            <li id="combat">Combat : 500</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="fight-launcher">
-                    <button id="btnFight" onclick="">!! FIGHT !!</button>
+                <div class="selectedHero-bet">
+                    <p class="selectedHero-VS">VS</p>
+                    <input type="number" id="bet" placeholder="BET !">
+                    <div class="betLauncher">
+                        <button id="btnBet" onclick="">!! BET !!</button>
+                    </div>
                 </div>
-                <div class="fight-player fight-player2">
-                    <img class="fight-player-img fight-player2-img" src="../assets/img/Batman.jpg"
+                <div class="selectedHero-player selectedHero-player2">
+                    <img class="selectedHero-player-img selectedHero-player2-img" src="../assets/img/Batman.jpg"
                         alt="Image de Batman" />
-                    <div class="fight-player-powerStats fight-player1-powerStats">
-                        PowerStats non communiquées
+                    <div class="selectedHero-player-powerStats selectedHero-player2-powerStats">
+                        <p>--------</p>
+                        <p>Surprise</p>
+                        <p>--------</p>
+                    </div>
+                </div>
+            </div>
+            <div class="selectionHero">
+                <div class="grid-heroes">
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/batman.jpg" class="grid-heroes-img" alt="" id="miniature1">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/captain.jpg" class="grid-heroes-img" alt="" id="miniature2">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Doctor Doom.jpg" class="grid-heroes-img" alt="" id="miniature3">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Flash.jpg" class="grid-heroes-img" alt="" id="miniature4">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Goku.jpg" class="grid-heroes-img" alt="" id="miniature5">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Harry Potter.jpg" class="grid-heroes-img" alt="" id="miniature6">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Hulk.jpg" class="grid-heroes-img" alt="" id="miniature7">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Killuog.jpg" class="grid-heroes-img" alt="" id="miniature8">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/King Kong.jpg" class="grid-heroes-img" alt="" id="miniature9">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Naruto.jpg" class="grid-heroes-img" alt="" id="miniature10">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Superman.jpg" class="grid-heroes-img" alt="" id="miniature11">
+                    </div>
+                    <div class="grid-heroes-div-img">
+                        <img src="../assets/img/Wolverine.jpg" class="grid-heroes-img" alt="" id="miniature12">
                     </div>
                 </div>
             </div>
