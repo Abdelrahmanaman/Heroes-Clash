@@ -83,7 +83,7 @@
         font-size: 2.5em;
         transition: all 1000ms ease;
     }
-
+    
     .header-money-amount {
         font-size: 1.4em;
         transition: all 1000ms ease;
@@ -94,8 +94,8 @@
     .header {
         padding: 15px !important;
     }
-
-
+    
+    
     .header-img_title-title {
         font-size: 2em;
         transition: all 1000ms ease;
@@ -110,7 +110,7 @@
         font-size: 2em;
         transition: all 1000ms ease;
     }
-
+    
     .header-money-amount {
         font-size: 1.3em;
         transition: all 1000ms ease;
@@ -134,7 +134,7 @@
         font-size: 1.5em;
         transition: all 1000ms ease;
     }
-
+    
     .header-money-amount {
         font-size: 1.2em;
         transition: all 1000ms ease;
@@ -145,7 +145,7 @@
     .header {
         padding: 10px !important;
     }
-
+    
     .header-img_title-title {
         font-size: 1.2em;
         transition: all 1000ms ease;
@@ -162,7 +162,7 @@
         font-size: 1.2em;
         transition: all 1000ms ease;
     }
-
+    
     .header-money-amount {
         font-size: 1em;
         transition: all 1000ms ease;
@@ -438,7 +438,7 @@
         margin-left: 300px !important;
         transition: all 1000ms ease;
     }
-
+    
     .selectedHero-player2 {
         margin-right: 300px !important;
         transition: all 1000ms ease;
@@ -450,9 +450,10 @@
         margin-left: 250px !important;
         transition: all 1000ms ease;
     }
-
+    
     .selectedHero-player2 {
         margin-right: 250px !important;
         transition: all 1000ms ease;
     }
 }
+
