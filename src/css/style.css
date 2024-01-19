@@ -116,7 +116,7 @@
 .roundTitle-title {
     color: white;
     font-family: Bebas Neue;
-    -webkit-text-stroke: #252D42;
+    -webkit-text-stroke: 3px black;
     font-size: 4em;
 }
 
