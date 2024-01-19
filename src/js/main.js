@@ -121,3 +121,6 @@ async function getSuperheroes() {
   }
   const game = new SuperHeroGame(100);
   
+/*****************Valentin********** */
+
+  
