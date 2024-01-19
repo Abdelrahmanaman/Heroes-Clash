@@ -122,7 +122,7 @@ async function getSuperheroes() {
   //     //* Display current wallet balance *//
   //     console.log(`Current wallet balance: ${this.wallet}`);
   
- HEAD
+ 
       // Check if the game is over or continue to the next round
       if (this.wallet <= 0) {
         console.log("Game over. Your wallet is empty.");
