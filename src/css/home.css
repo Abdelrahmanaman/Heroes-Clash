@@ -29,7 +29,7 @@ h1{
     text-align: justify;
     background: rgba(114, 139, 169, 0.5);
     margin-top: 50px;
-   padding: 25px;
+    padding: 25px;
 }
 .rules-contain{
     margin-top: 250px;
@@ -48,8 +48,21 @@ h1{
     width: 80px;
     height: 80px;
     margin: auto; 
-    margin-top: 180px; 
+    margin-top: 380px; 
+    animation: bounce 2s infinite;
 }
+.play-button:hover
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
 
 .triangle {
     width: 0;
