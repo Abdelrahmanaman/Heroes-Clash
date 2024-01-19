@@ -67,17 +67,115 @@
     transition: all 1000ms ease;
 }
 
+/*****************     MEDIA QUERIES HEADER    *****************/
+@media screen and (max-width: 1000px) {
+    .header-img_title-title {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
 
-/*****************     MAIN     *****************/
-/************************************************/
+    .header-img_title-img {
+        height: 85px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.4em;
+        transition: all 1000ms ease;
+    }   
+}
+
+@media screen and (max-width: 750px) {
+    .header {
+        padding: 15px !important;
+    }
+    
+    
+    .header-img_title-title {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        height: 75px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        font-size: 2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.3em;
+        transition: all 1000ms ease;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    .header-img_title-title {
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 30px !important;
+        height: 65px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 10px !important;
+        font-size: 1.5em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 10px !important;
+    }
+    
+    .header-img_title-title {
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+
+    .header-img_title-img {
+        padding-right: 20px !important;
+        height: 50px;
+        transition: all 1000ms ease;
+    }
+
+    .header-money-dollar {
+        padding-right: 5px !important;
+        font-size: 1.2em;
+        transition: all 1000ms ease;
+    }
+    
+    .header-money-amount {
+        font-size: 1em;
+        transition: all 1000ms ease;
+    } 
+}
 
 
+/*****************    GAME - MAIN     *****************/
 /*****************    GAME - ZONE DE COMPTAGE DES POINTS     *****************/
 .roundCount {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: aliceblue; */
     height: 60px;
     margin-top: 20px !important;
 }
@@ -86,7 +184,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color:aquamarine; */
     height: 50px;
     width: 200px; 
 }
@@ -164,6 +261,14 @@
     border-radius: 20px;
 }
 
+.fight-player2-powerStats-p {
+    background-color: white;
+    border: 1px solid #252D42;
+    border-radius: 20px;
+    font-size: 0.8em;
+    padding: 2px 10px !important;
+}
+
 
 #btnFight {
     color: #252D42;
@@ -209,10 +314,12 @@
 
 .selectedHero-player1 {
     margin-left: 400px !important;
+    transition: all 1000ms ease;
 }
 
 .selectedHero-player2 {
     margin-right: 400px !important;
+    transition: all 1000ms ease;
 }
 
 .selectedHero-player-img {
@@ -325,104 +432,28 @@
 
 
 
-/*****************     MEDIA QUERIES     *****************/
-@media screen and (max-width: 1000px) {
-    .header-img_title-title {
-        font-size: 2.5em;
-        transition: all 1000ms ease;
-    }
-
-    .header-img_title-img {
-        height: 85px;
-        transition: all 1000ms ease;
-    }
-
-    .header-money-dollar {
-        font-size: 2.5em;
+/*****************    MEDIA QUERIES SELECTION     *****************/
+@media screen and (max-width: 1700px) {
+    .selectedHero-player1 {
+        margin-left: 300px !important;
         transition: all 1000ms ease;
     }
     
-    .header-money-amount {
-        font-size: 1.4em;
+    .selectedHero-player2 {
+        margin-right: 300px !important;
         transition: all 1000ms ease;
-    }   
+    }
 }
 
-@media screen and (max-width: 750px) {
-    .header {
-        padding: 15px !important;
-    }
-    
-    
-    .header-img_title-title {
-        font-size: 2em;
-        transition: all 1000ms ease;
-    }
-
-    .header-img_title-img {
-        height: 75px;
-        transition: all 1000ms ease;
-    }
-
-    .header-money-dollar {
-        font-size: 2em;
+@media screen and (max-width: 1600px) {
+    .selectedHero-player1 {
+        margin-left: 250px !important;
         transition: all 1000ms ease;
     }
     
-    .header-money-amount {
-        font-size: 1.3em;
+    .selectedHero-player2 {
+        margin-right: 250px !important;
         transition: all 1000ms ease;
-    }  
+    }
 }
 
-@media screen and (max-width: 600px) {
-    .header-img_title-title {
-        font-size: 1.5em;
-        transition: all 1000ms ease;
-    }
-
-    .header-img_title-img {
-        padding-right: 30px !important;
-        height: 65px;
-        transition: all 1000ms ease;
-    }
-
-    .header-money-dollar {
-        padding-right: 10px !important;
-        font-size: 1.5em;
-        transition: all 1000ms ease;
-    }
-    
-    .header-money-amount {
-        font-size: 1.2em;
-        transition: all 1000ms ease;
-    } 
-}
-
-@media screen and (max-width: 500px) {
-    .header {
-        padding: 10px !important;
-    }
-    
-    .header-img_title-title {
-        font-size: 1.2em;
-        transition: all 1000ms ease;
-    }
-
-    .header-img_title-img {
-        padding-right: 20px !important;
-        height: 50px;
-        transition: all 1000ms ease;
-    }
-
-    .header-money-dollar {
-        padding-right: 5px !important;
-        font-size: 1.2em;
-        transition: all 1000ms ease;
-    }
-    
-    .header-money-amount {
-        font-size: 1em;
-        transition: all 1000ms ease;
-    } 
-}
