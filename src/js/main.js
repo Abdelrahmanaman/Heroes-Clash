@@ -53,12 +53,12 @@ async function getSuperheroes() {
   
       }
       //* Generating a random Img and intailizing the game *//
-      bet.addEventListener("click", function () {
-        const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
-        const randomHero = superheroData[randomHeroIndex];
-        compDisplay.src = randomHero.image.url;
-        console.log(superheroData)
-      });
+      // bet.addEventListener("click", function () {
+      //   // const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
+      //   // const randomHero = superheroData[randomHeroIndex];
+      //   // compDisplay.src = randomHero.image.url;
+      //   // console.log(superheroData)
+      // });
     } catch (error) {
       // console.error(`Error: ${error}`);
     }
@@ -154,3 +154,28 @@ if(betGo > 100){
 else{
   console.log("Vous n'avez pas assez d'argent !")
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*################# Abdelrahman ########################*//
+
+// //* Creating a function for the game intialization*//
+// const statSelection = document.getElementById("powerStats-select")
+// const  statValue = statSelection.value
+// function initGame(){
+//   if(statValue === ""){
+//     console.log("Please select a stat")
+//   }
+
+// }
