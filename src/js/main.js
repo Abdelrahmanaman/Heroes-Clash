@@ -38,11 +38,11 @@ async function getSuperheroes() {
         superheroImg[i].addEventListener("click", function () {
           imgTest.src = resp.image.url;
           intelligence.textContent = `Intelligence: ${resp.powerstats.intelligence}`
-          speed.textContent = `Intelligence: ${resp.powerstats.speed}`
-          combat.textContent = `Intelligence: ${resp.powerstats.combat}`
-          strength.textContent = `Intelligence: ${resp.powerstats.strength}`
-          durability.textContent = `Intelligence: ${resp.powerstats.durability}`
-          power.textContent = `Intelligence: ${resp.powerstats.power}`
+          speed.textContent = `Speed: ${resp.powerstats.speed}`
+          combat.textContent = `Combat: ${resp.powerstats.combat}`
+          strength.textContent = `Strength: ${resp.powerstats.strength}`
+          durability.textContent = `durability: ${resp.powerstats.durability}`
+          power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
           superheroData = superheroData.filter(superhero => superhero.id !== resp.id);
         });

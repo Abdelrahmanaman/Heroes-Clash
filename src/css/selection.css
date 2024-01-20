@@ -17,11 +17,13 @@
     border: 3px solid #252D42;
     border-radius: 20px;
     background-color: white;
+    border: none;
 }
 
 .selectedHero-player1 {
     margin-left: 400px !important;
     transition: all 1000ms ease;
+
 }
 
 .selectedHero-player2 {
@@ -124,11 +126,21 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     row-gap: 15px;
     column-gap: 80px;
+    transition: all 1000ms ease;
 }
 
 .grid-heroes-div-img {
     border: 2px solid #252D42;
     border-radius: 20px;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+    border: none;
+}
+.grid-heroes-div-img:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 105px 45px rgba(255,255,255,1);
+    border: none;
+
 }
 
 .grid-heroes-img {
@@ -161,4 +173,147 @@
         margin-right: 250px !important;
         transition: all 1000ms ease;
     }
+}
+
+@media screen and (max-width: 1500px) {
+    .selectedHero-player1 {
+        margin-left: 200px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 200px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 70px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .selectedHero-player1 {
+        margin-left: 150px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 150px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 60px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .selectedHero-player1 {
+        margin-left: 100px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 100px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 50px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .selectedHero-player1 {
+        margin-left: 50px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 50px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 40px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .selectedHero-player1 {
+        margin-left: 40px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 40px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 30px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .selectedHero-player1 {
+        margin-left: 30px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 30px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 15px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .selectedHero-player1 {
+        margin-left: 20px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .selectedHero-player2 {
+        margin-right: 20px !important;
+        transition: all 1000ms ease;
+    }
+
+    .grid-heroes {
+        column-gap: 10px;
+        transition: all 1000ms ease;
+    }
+}
+@media (max-width:800px){
+
+    .selectedHero{
+        width: 100%;
+        
+    }
+    .selectedHero-player1{
+        width:400px;
+    }
+    .grid-heroes-div-img{
+        height: 100%;
+        padding: 5rem;
+
+    }
+    .grid-heroes-div-img img{
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+    .selectedHero-player-img{
+        width: 100%;
+    }
+    
 }
