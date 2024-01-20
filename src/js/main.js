@@ -9,7 +9,7 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 500
+let coin = 100
 let intelligence = document.getElementById("intelligence")
 let power = document.getElementById("power")
 let durability = document.getElementById("durability")
@@ -146,11 +146,16 @@ async function getSuperheroes() {
 
 const betGoValue = document.getElementById("input-bet").value 
 bet.addEventListener('click', function(){
-  console.log("Hello")
-})
-if(betGo > 100){
+  window.location.href = "game.html"
 
-}
+})
+if(betGoValue < coin){
+  
+    
+  }
 else{
   console.log("Vous n'avez pas assez d'argent !")
 }
+
+
+function gameStart()
