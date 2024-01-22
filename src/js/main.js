@@ -191,7 +191,15 @@ const playerImg = document.getElementById("player-img")
 
 const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
 const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
-let statSelected = false
+console.log(powerstats)
+
+//Update menu with API (powerstats) values
+intelligence.textContent = `Intelligence: ${powerstats.intelligence}`
+strength.textContent = `Strength: ${powerstats.strength}`
+speed.textContent = `Speed: ${powerstats.speed}`
+durability.textContent = `Durability: ${powerstats.durability}`
+power.textContent = `Power: ${powerstats.power}`
+combat.textContent = `Combat: ${powerstats.combat}`
 
 if (selectedPlayerImg) {
   playerImg.src = selectedPlayerImg;
@@ -202,21 +210,26 @@ if (selectedPlayerImg) {
 function GameStart () {
   selectPowerStat = document.getElementById("powerStats-select").value
   if(selectPowerStat) {
-    statSelected = true
-    console.log("fight")
-    if (statSelected === true) {
-      
-    }
+    console.log(selectPowerStat.value)
   }
   else {
     alert("Choisir une compétence")
   }
 }
 
+function UpdateEnemyStats (value) {
+  document.getElementById('enemyStats').value = value;
+  console.log(value)
+}
 
 
+//Met à jour les valeurs de de select pour les remplacer par valeurs de powerStat
+// function UpdateOptionsValues () {
+//   for (const key in powerstats) {
+//     const option = document.getElementById(key)
+//     if (option) {
+//       option.textContent = powerstats[key]; 
+//     }
+//   }
+// }
 
-
-
-
-console.log(powerstats)

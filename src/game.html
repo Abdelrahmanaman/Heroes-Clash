@@ -61,7 +61,7 @@
                     <img id="player-img" class="fight-player-img fight-player1-img" src="../assets/img/captain.jpg"
                         alt="Image Captain America" />
                     <div class="fight-player-powerStats fight-player1-powerStats">
-                        <select name="powerStats" id="powerStats-select">
+                        <select name="powerStats" id="powerStats-select" onchange="UpdateEnemyStats(this.value)">
                             <option value="">--Please choose a PowerStats--</option>
                             <option id="intelligence" value="intelligence">Intelligence</option>
                             <option id="strength" value="strength">Strength</option>
@@ -78,7 +78,7 @@
                 <div class="fight-player fight-player2">
                     <img id="computer-img"class="fight-player-img fight-player2-img" src="../assets/img/Unknown.png"
                         alt="Image de Batman" />
-                    <div class="fight-player-powerStats fight-player1-powerStats">
+                    <div class="fight-player-powerStats fight-player1-powerStats" id="enemyStats">
                         PowerStats non communiquées
                     </div>
                 </div>
