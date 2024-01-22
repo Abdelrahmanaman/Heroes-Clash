@@ -17,6 +17,10 @@ let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 
+
+
+
+
 console.log("test")
 //* fetching the Api function 
 async function getSuperheroes() {
@@ -50,6 +54,7 @@ async function getSuperheroes() {
            superheroData.filter(superhero => superhero.id !== resp.id);
            localStorage.setItem("playerImg", resp.image.url)
            localStorage.setItem("powerstats", JSON.stringify(resp.powerstats))
+           localStorage.setItem("playerId", resp.id)
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -144,6 +149,17 @@ async function getSuperheroes() {
   // }
   // const game = new SuperHeroGame(100);
   
+
+  const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
+  const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
+
+
+  const selectedId = parseInt(localStorage.getItem("playerId"))
+
+  const computerSelection = superheroIds.filter((id)=> id !== selectedId)
+  
+  const randomIndex = Math.floor(Math.random() * computerSelection.length);
+
 /*****************Valentin********** */
 
   let btnBet = document.getElementById("btnBet");
@@ -169,10 +185,13 @@ async function getSuperheroes() {
 
 async function recuperateComputer() {
   try {
+
+    
+
+
     const computerImg = document.getElementById("computer-img");
-    const selectedHero = localStorage.getItem("selectedHero");
-    if (selectedHero) {
-      const url = `https://superheroapi.com/api/${apiKey}/${selectedHero}`;
+    if (computerImg) {
+      const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
       const result = await fetch(url);
       const resp = await result.json();
       computerImg.src = resp.image.url;
@@ -183,10 +202,12 @@ async function recuperateComputer() {
     console.log("Erreur lors de la récupération du personnage", error);
   }
 }
+//* Setting a to save the player ID to local storage
+const selectedPlayerId = localStorage.getItem("playerId")
 
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
-const selectedPlayerImg = localStorage.getItem('playerImg');
+  const selectedPlayerImg = localStorage.getItem('playerImg');
   const playerImg = document.getElementById("player-img")
   if (selectedPlayerImg) {
     playerImg.src = selectedPlayerImg;
@@ -196,9 +217,3 @@ const selectedPlayerImg = localStorage.getItem('playerImg');
 
 
 
-
-
-
-
-const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
-const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats

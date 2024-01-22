@@ -7,8 +7,10 @@ const CRoundThree = document.getElementById("c-round3")
 
 //* Function to trigger the rounds color results
 
+//* Fonction Test
 pRoundOne.addEventListener("click", function(){
-    pRoundTwo.style.backgroundColor = "Green"
+    pRoundOne.style.backgroundColor = "Green";
+    cRoundOne.style.backgroundColor = "Red"
 })
 
 function roundOne(winner){
@@ -26,15 +28,15 @@ function roundThree(winner){
 }
 
 
-
-
+// Change le titre du Round
 function roundTitle(i) {
     const titreRound = document.querySelector(".roundTitle-title")
     titreRound.innerHTML=`Round ${i}`
 }
 
+// Désactive l'option de la liste de selection, utilisé lors du roud précédent
+// l'option en question est envoyé par le résultat du round précédent
 function updateSelectList (usedValuePreviousRound) {
-    const optionSelected = document.getElementById("powerStats-select")
-    console.log(optionSelected)
-    
+    const optionSelected = document.getElementById("usedValuePreviousRound")
+    optionSelected.disabled = true;
 }
