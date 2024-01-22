@@ -187,18 +187,36 @@ async function recuperateComputer() {
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
 const selectedPlayerImg = localStorage.getItem('playerImg');
-  const playerImg = document.getElementById("player-img")
-  if (selectedPlayerImg) {
-    playerImg.src = selectedPlayerImg;
-  } else {
-    console.error('Selected superhero image URL not found in localStorage.');
-  }
-
-
-
-
-
-
+const playerImg = document.getElementById("player-img")
 
 const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
 const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
+let statSelected = false
+
+if (selectedPlayerImg) {
+  playerImg.src = selectedPlayerImg;
+} else {
+  console.error('Selected superhero image URL not found in localStorage.');
+}
+
+function GameStart () {
+  selectPowerStat = document.getElementById("powerStats-select").value
+  if(selectPowerStat) {
+    statSelected = true
+    console.log("fight")
+    if (statSelected === true) {
+      
+    }
+  }
+  else {
+    alert("Choisir une compétence")
+  }
+}
+
+
+
+
+
+
+
+console.log(powerstats)
