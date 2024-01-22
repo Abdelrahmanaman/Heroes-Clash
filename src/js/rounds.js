@@ -28,13 +28,18 @@ function roundThree(winner){
 
 
 
+
+
+
+
+
+
 function roundTitle(i) {
     const titreRound = document.querySelector(".roundTitle-title")
     titreRound.innerHTML=`Round ${i}`
 }
 
 function updateSelectList (usedValuePreviousRound) {
-    const optionSelected = document.getElementById("powerStats-select")
-    console.log(optionSelected)
-    
+    const optionSelected = document.getElementById("usedValuePreviousRound")
+    optionSelected.disabled = true;
 }
