@@ -84,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid #252D42; */
+    border: 2px solid #252D42;
     border-radius: 20px;
     width:300px;
     
@@ -95,7 +95,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid white; */
+    border: 2px solid white;
     border-radius: 20px;
     text-align: justify;
     background-color: rgba(114, 139, 169, 0.5);
@@ -114,14 +114,6 @@
     color: white;
     margin-bottom: 30px !important;
 }
-
-
-
-
-
-
-
-
 
 
 
