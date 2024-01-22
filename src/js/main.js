@@ -1,3 +1,8 @@
+
+const myCoin = parseInt(document.querySelector(".header-money-amount").textContent);
+console.log(myCoin);
+
+
 //* Declaring variable *//
 
 
@@ -220,3 +225,8 @@ function GameStart () {
 
 
 console.log(powerstats)
+
+
+const myCoins = document.querySelector(".header-money-amount");
+console.log("test");
+
