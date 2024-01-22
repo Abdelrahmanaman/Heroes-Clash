@@ -9,7 +9,7 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 500
+let coin = 500;
 let intelligence = document.getElementById("intelligence")
 let power = document.getElementById("power")
 let durability = document.getElementById("durability")
@@ -20,7 +20,7 @@ let strength = document.getElementById("strength")
 console.log("test")
 //* fetching the Api function 
 async function getSuperheroes() {
-    try {
+    try { 
 
         //* Creaing a loop to render each of the heroes in one of the 12 IMG grid container *//
   
@@ -52,15 +52,16 @@ async function getSuperheroes() {
   
   
       }
-      //* Generating a random Img and intailizing the game *//
+      // * Generating a random Img and intailizing the game *//
       bet.addEventListener("click", function () {
         const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
         const randomHero = superheroData[randomHeroIndex];
         compDisplay.src = randomHero.image.url;
         console.log(superheroData)
+        
       });
     } catch (error) {
-      // console.error(`Error: ${error}`);
+      console.error(`Error: ${error}`);
     }
   }
   getSuperheroes()
@@ -123,12 +124,12 @@ async function getSuperheroes() {
   //     console.log(`Current wallet balance: ${this.wallet}`);
   
  
-      // Check if the game is over or continue to the next round
-      // if (this.wallet <= 0) {
-      //   console.log("Game over. Your wallet is empty.");
-      // } else {
-      //   console.log("Starting the next round...\n");
-      // }
+  //     Check if the game is over or continue to the next round
+  //     if (this.wallet <= 0) {
+  //       console.log("Game over. Your wallet is empty.");
+  //     } else {
+  //       console.log("Starting the next round...\n");
+  //     }
     
   // const game = new SuperHeroGame(100);
   
@@ -144,13 +145,29 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-const betGoValue = document.getElementById("input-bet").value 
-bet.addEventListener('click', function(){
-  console.log("Hello")
-})
-if(betGo > 100){
+document.addEventListener("DOMContentLoaded", function () {
+  let wallet = document.getElementById("coin");
+  coin = parseInt(localStorage.getItem("coin")) || 500;
+  wallet.textContent = coin.toString();
 
-}
-else{
-  console.log("Vous n'avez pas assez d'argent !")
-}
+  let inputBet = document.getElementById("input-bet");
+  let bet = document.getElementById("btnBet");
+
+  bet.addEventListener("click", function () {
+    let betAmount = parseInt(inputBet.value);
+
+    if (coin < betAmount || coin === 0) {
+      console.log("Vous n'avez pas assez d'argent !");
+    } else {
+      coin -= betAmount;
+      wallet.textContent = coin;
+      localStorage.setItem("coin", coin);
+
+      setTimeout(function () {
+        window.location.href = "game.html";
+      }, 3000);
+    }
+  });
+});
+
+
