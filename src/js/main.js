@@ -146,27 +146,27 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-document.addEventListener("DOMContentLoaded", async function () {
   let btnBet = document.getElementById("btnBet");
   let btnFight = document.getElementById("btnFight");
-
-  if (btnFight) {
+  let amountBet = document.getElementById("input-bet.")
+  if (btnBet) {
+    btnBet.addEventListener("click", function () {
+      if(coin < amountBet){
+        console.log("Vous n'avez pas assez de monnaie")
+        coin -= amountBet
+      }else{
+      window.location.href = "game.html";
+  }});
+  }if (btnFight) {
     btnFight.addEventListener("click", async function () {
       const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
       const randomHero = superheroIds[randomHeroIndex];
-      let amountBet = document.getElementById("input-bet")
-      coin -= amountBet
       localStorage.setItem("selectedHero", randomHero);
       window.location.href = "game.html";
     });
   }
-  if (btnBet) {
-    btnBet.addEventListener("click", function () {
-      window.location.href = "game.html";
-    });
-  }
   await recuperateComputer();
-});
+
 async function recuperateComputer() {
   try {
     const computerImg = document.getElementById("computer-img");
