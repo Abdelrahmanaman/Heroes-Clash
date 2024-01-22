@@ -160,7 +160,6 @@ async function getSuperheroes() {
 // }
 
 
-// CountQueuingStrategy computerImg = document
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
 const selectedPlayerImg = localStorage.getItem('player-Img');
   const playerImg = document.getElementById("player-img")
