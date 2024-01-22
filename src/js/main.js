@@ -18,14 +18,14 @@ let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 let resp;
 
+coins = parseInt(localStorage.getItem("coinCount")) || 0;
+
 localStorage.setItem("coinCount", coin.toString());
- coin = parseInt(localStorage.getItem("coinCount")) || 0;
  
  const wallet = document.getElementById("coin")
  
- wallet.textContent += coin
- wallet.textContent += coin 
- console.log(typeof coin)
+ wallet.textContent += coins
+ wallet.textContent += 200
 
 
 
