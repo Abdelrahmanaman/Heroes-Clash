@@ -29,8 +29,11 @@ async function getSuperheroes() {
         const url = `https://superheroapi.com/api/${apiKey}/${superheroId}`;
   
         const result = await fetch(url);
-        const resp = await result.json();
-        console.log("resp")
+        const resp = await result.json()
+        
+
+
+        console.log(resp)
   
         superheroImg[i].src = resp.image.url;
        //* Rendering the chosen Img on the Main selected Img container *//
@@ -44,7 +47,7 @@ async function getSuperheroes() {
           durability.textContent = `durability: ${resp.powerstats.durability}`
           power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
-          superheroData = superheroData.filter(superhero => superhero.id !== resp.id);
+           superheroData.filter(superhero => superhero.id !== resp.id);
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -144,17 +147,22 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-const betGoValue = document.getElementById("input-bet").value 
-bet.addEventListener('click', function(){
-  window.location.href = "game.html"
+// const betGoValue = document.getElementById("input-bet").value 
+// bet.addEventListener('click', function(){
+//   window.location.href = "game.html"
 
-})
-if(betGoValue < coin){
+// })
+// if(betGoValue < coin){
   
     
-  }
-else{
-  console.log("Vous n'avez pas assez d'argent !")
-}
+//   }
+// else{
+//   console.log("Vous n'avez pas assez d'argent !")
+// }
+
+
+// CountQueuingStrategy computerImg = document
+
+
 
 
