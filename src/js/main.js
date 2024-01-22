@@ -9,7 +9,7 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 100
+let coin = 500
 let intelligence = document.getElementById("intelligence")
 let power = document.getElementById("power")
 let durability = document.getElementById("durability")
@@ -17,6 +17,7 @@ let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 
+localStorage.setItem('mycoinz', coin)
 
 
 
@@ -161,34 +162,48 @@ async function getSuperheroes() {
   const randomIndex = Math.floor(Math.random() * computerSelection.length);
 
 /*****************Valentin********** */
+document.addEventListener("DOMContentLoaded", async function () {
+  let wallet = document.getElementById("coin");
+  let coin = parseInt(localStorage.getItem("mycoinz"));
+  wallet.textContent = coin;
 
-  let btnBet = document.getElementById("btnBet");
+  let inputBet = document.getElementById("input-bet");
+  let bet = document.getElementById("btnBet");
   let btnFight = document.getElementById("btnFight");
-  let amountBet = document.getElementById("input-bet.")
-  if (btnBet) {
-    btnBet.addEventListener("click", function () {
-      if(coin < amountBet){
-        console.log("Vous n'avez pas assez de monnaie")
-        coin -= amountBet
-      }else{
-      window.location.href = "game.html";
-  }});
-  }if (btnFight) {
+
+  bet.addEventListener("click", function () {
+    let betAmount = parseInt(inputBet.value);
+
+    if (coin < betAmount || coin === 0) {
+      console.log("Vous n'avez pas assez d'argent !");
+    } else {
+      coin -= betAmount;
+      wallet.textContent = coin;
+      localStorage.setItem("coin", coin);
+
+      setTimeout(function () {
+        window.location.href = "game.html";
+      }, 3000);
+    }
+  });
+
+  if (btnFight) {
     btnFight.addEventListener("click", async function () {
-      const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
-      const randomHero = superheroIds[randomHeroIndex];
-      localStorage.setItem("selectedHero", randomHero);
-      window.location.href = "game.html";
+      try {
+        const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
+        const randomHero = superheroIds[randomHeroIndex];
+        localStorage.setItem("selectedHero", randomHero);
+        await recuperateComputer();
+        window.location.href = "game.html";
+      } catch (error) {
+        console.error("Erreur lors du combat", error);
+      }
     });
   }
-  await recuperateComputer();
+});
 
 async function recuperateComputer() {
   try {
-
-    
-
-
     const computerImg = document.getElementById("computer-img");
     if (computerImg) {
       const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
