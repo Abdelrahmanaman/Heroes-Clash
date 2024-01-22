@@ -57,10 +57,7 @@ async function getSuperheroes() {
       }
       //* Generating a random Img and intailizing the game *//
       bet.addEventListener("click", function () {
-        const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
-        const randomHero = superheroData[randomHeroIndex];
-        compDisplay.src = randomHero.image.url;
-        console.log(superheroData)
+        location.href = "game.html"
       });
     } catch (error) {
       // console.error(`Error: ${error}`);
