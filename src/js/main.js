@@ -230,7 +230,11 @@ const selectedPlayerId = localStorage.getItem("playerId")
 //<<<<<<< HEAD
 const selectedPlayerImg = localStorage.getItem('playerImg');
 const playerImg = document.getElementById("player-img")
-console.log(powerstats)
+if (selectedPlayerImg) {
+  playerImg.src = selectedPlayerImg;
+} else {
+  console.error('Selected superhero image URL not found in localStorage.');
+}  
 
 //Update menu with API (powerstats) values
 intelligence.textContent = `Intelligence: ${powerstats.intelligence}`
@@ -238,52 +242,38 @@ strength.textContent = `Strength: ${powerstats.strength}`
 speed.textContent = `Speed: ${powerstats.speed}`
 durability.textContent = `Durability: ${powerstats.durability}`
 power.textContent = `Power: ${powerstats.power}`
-combat.textContent = `Combat: ${powerstats.combat}`
 
-if (selectedPlayerImg) {
-  playerImg.src = selectedPlayerImg;
-} else {
-  console.error('Selected superhero image URL not found in localStorage.');
-}
+let selectedStat = false
 
 function GameStart () {
   selectPowerStat = document.getElementById("powerStats-select").value
   if(selectPowerStat) {
-    console.log(selectPowerStat.value)
+    console.log("fight")
+    selectedStat = true
+    if(selectedStat === true) {
+      
+    }
   }
-  const selectedPlayerImg = localStorage.getItem('playerImg');
-  const playerImg = document.getElementById("player-img")
-  if (selectedPlayerImg) {
-    playerImg.src = selectedPlayerImg;
-  } else {
-    console.error('Selected superhero image URL not found in localStorage.');
-  }  
+
+  else {
+    alert("Choisir une compétence")
+  }
 }
 
-function UpdateEnemyStats (value) {
-  document.getElementById('enemyStats').value = value;
-  console.log(value)
-}
+
 
 
 //Met à jour les valeurs de de select pour les remplacer par valeurs de powerStat
 // function UpdateOptionsValues () {
-//   for (const key in powerstats) {
-//     const option = document.getElementById(key)
-//     if (option) {
-//       option.textContent = powerstats[key]; 
-//     }
-//   }
-// }
+  //   for (const key in powerstats) {
+    //     const option = document.getElementById(key)
+    //     if (option) {
+      //       option.textContent = powerstats[key]; 
+      //     }
+      //   }
+      // }
 
 //<<<<<<< HEAD
 //=======
 
 
-
-console.log(powerstats)
-
-
-
-
-//>>>>>>> 9c0cff555d1e57838f598e882134f087cda81d06

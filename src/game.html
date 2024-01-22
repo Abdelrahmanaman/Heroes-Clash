@@ -61,7 +61,7 @@
                     <img id="player-img" class="fight-player-img fight-player1-img" src="../assets/img/captain.jpg"
                         alt="Image Captain America" />
                     <div class="fight-player-powerStats fight-player1-powerStats">
-                        <select name="powerStats" id="powerStats-select" onchange="UpdateEnemyStats(this.value)">
+                        <select name="powerStats" id="powerStats-select">
                             <option value="">--Please choose a PowerStats--</option>
                             <option id="intelligence" value="intelligence">Intelligence</option>
                             <option id="strength" value="strength">Strength</option>
@@ -73,14 +73,22 @@
                     </div>
                 </div>
                 <div class="fight-launcher">
-                    <button id="btnFight">!! FIGHT !!</button>
+                    <button id="btnFight" onclick="GameStart()">!! FIGHT !!</button>
                 </div>
                 <div class="fight-player fight-player2">
                     <img id="computer-img"class="fight-player-img fight-player2-img" src="../assets/img/Unknown.png"
                         alt="Image de Batman" />
-                    <div class="fight-player-powerStats fight-player1-powerStats" id="enemyStats">
-                        PowerStats non communiquées
-                    </div>
+                        <div class="fight-player-powerStats fight-player1-powerStats">
+                            <select name="powerStats" id="powerStats-select">
+                                <option value="">--Please choose a PowerStats--</option>
+                                <option id="intelligence" value="intelligence">Intelligence</option>
+                                <option id="strength" value="strength">Strength</option>
+                                <option id="speed" value="speed">Speed</option>
+                                <option id="durability" value="durability">Durability</option>
+                                <option id="power" value="power">Power</option>
+                                <option id="combar" value="combar">Combat</option>
+                            </select>
+                        </div>
                 </div>
             </div>
         </main>
