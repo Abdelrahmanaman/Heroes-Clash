@@ -1,3 +1,8 @@
+
+const myCoin = parseInt(document.querySelector(".header-money-amount").textContent);
+console.log(myCoin);
+
+
 //* Declaring variable *//
 
 
@@ -229,6 +234,15 @@ const selectedPlayerId = localStorage.getItem("playerId")
   } else {
     console.error('Selected superhero image URL not found in localStorage.');
   }
+
+
+
+
+
+
+
+console.log(powerstats)
+
 
 
 
