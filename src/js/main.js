@@ -29,8 +29,11 @@ async function getSuperheroes() {
         const url = `https://superheroapi.com/api/${apiKey}/${superheroId}`;
   
         const result = await fetch(url);
-        const resp = await result.json();
-        console.log("resp")
+        const resp = await result.json()
+        
+
+
+        console.log(resp)
   
         superheroImg[i].src = resp.image.url;
        //* Rendering the chosen Img on the Main selected Img container *//
@@ -44,7 +47,9 @@ async function getSuperheroes() {
           durability.textContent = `durability: ${resp.powerstats.durability}`
           power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
-          superheroData = superheroData.filter(superhero => superhero.id !== resp.id);
+           superheroData.filter(superhero => superhero.id !== resp.id);
+           localStorage.setItem("playerImg", resp.image.url)
+           localStorage.setItem("powerstats", JSON.stringify(resp.powerstats))
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -54,10 +59,7 @@ async function getSuperheroes() {
       }
       //* Generating a random Img and intailizing the game *//
       bet.addEventListener("click", function () {
-        const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
-        const randomHero = superheroData[randomHeroIndex];
-        compDisplay.src = randomHero.image.url;
-        console.log(superheroData)
+        location.href = "game.html"
       });
     } catch (error) {
       // console.error(`Error: ${error}`);
@@ -144,40 +146,17 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-document.addEventListener("DOMContentLoaded", async function () {
-  let btnBet = document.getElementById("btnBet");
-  let btnFight = document.getElementById("btnFight");
+const betGoValue = document.getElementById("input-bet").value 
+bet.addEventListener('click', function(){
+  window.location.href = "game.html"
 
-  if (btnFight) {
-    btnFight.addEventListener("click", async function () {
-      const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
-      const randomHero = superheroIds[randomHeroIndex];
-      let amountBet = document.getElementById("input-bet")
-      coin -= amountBet
-      localStorage.setItem("selectedHero", randomHero);
-      window.location.href = "game.html";
-    });
+})
+if(betGoValue < coin){
+  
+    
   }
-  if (btnBet) {
-    btnBet.addEventListener("click", function () {
-      window.location.href = "game.html";
-    });
-  }
-  await recuperateComputer();
-});
-async function recuperateComputer() {
-  try {
-    const computerImg = document.getElementById("computer-img");
-    const selectedHero = localStorage.getItem("selectedHero");
-    if (selectedHero) {
-      const url = `https://superheroapi.com/api/${apiKey}/${selectedHero}`;
-      const result = await fetch(url);
-      const resp = await result.json();
-      computerImg.src = resp.image.url;
-    } else {
-      console.error("Aucun personnage sélectionné.");
-    }
-  } catch (error) {
-    console.log("Erreur lors de la récupération du personnage", error);
-  }
+else{
+  console.log("Vous n'avez pas assez d'argent !")
 }
+
+
