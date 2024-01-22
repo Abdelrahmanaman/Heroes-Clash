@@ -17,7 +17,7 @@
     border: 3px solid #252D42;
     border-radius: 20px;
     background-color: white;
-    border: none;
+    /* border: none; */
 }
 
 .selectedHero-player1 {
@@ -74,6 +74,7 @@
     flex-direction: column;
     justify-self: center;
     align-items: center;
+    padding: 0 5px !important;
 }
 
 .selectedHero-VS {
@@ -97,13 +98,14 @@
     color: #252D42;
     font-weight: bold;
     font-family: Bebas Neue;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 60px;
     height: 60px;
     border: 2px solid #252D42;
     border-radius: 50%;
     transform: scale(1);
     transition: all 1000ms ease;
+    padding: 5px !important;
 }
 
 #btnBet:hover {
@@ -134,12 +136,12 @@
     border-radius: 20px;
     cursor: pointer;
     transition: all 200ms ease-out;
-    border: none;
+    /* border: none; */
 }
 .grid-heroes-div-img:hover{
     transform: scale(1.2);
     box-shadow: 0px 0px 105px 45px rgba(255,255,255,1);
-    border: none;
+    /* border: none; */
 
 }
 
@@ -293,27 +295,97 @@
         transition: all 1000ms ease;
     }
 }
-@media (max-width:800px){
 
-    .selectedHero{
-        width: 100%;
-        
+@media screen and (max-width:850px){
+    #displayed-hero {
+        width: 200px;
+        transition: all 1000ms ease;
     }
-    .selectedHero-player1{
-        width:400px;
-    }
-    .grid-heroes-div-img{
-        height: 100%;
-        padding: 5rem;
 
+    #computer-display {
+        width: 200px;
+        transition: all 1000ms ease;
     }
-    .grid-heroes-div-img img{
-        width: 100%;
-        aspect-ratio: 3/2;
-        object-fit: contain;
+
+    .grid-heroes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 50px;
+        transition: all 1000ms ease;
     }
-    .selectedHero-player-img{
-        width: 100%;
+}
+
+@media screen and (max-width:700px){
+    #displayed-hero {
+        width: 150px;
+        transition: all 1000ms ease;
+    }
+
+    #computer-display {
+        width: 150px;
+        transition: all 1000ms ease;
+    }
+
+    .selectedHero-player-powerStats {
+        font-size: 0.7em;
+    }
+
+    .grid-heroes {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 50px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width:600px){
+    .selectedHero-player1 {
+        margin-left: 10px !important;
+        transition: all 1000ms ease;
     }
     
+    .selectedHero-player2 {
+        margin-right: 10px !important;
+        transition: all 1000ms ease;
+    }
+   
+    #displayed-hero {
+        width: 120px;
+        transition: all 1000ms ease;
+    }
+
+    #computer-display {
+        width: 120px;
+        transition: all 1000ms ease;
+    }
+
+    .selectedHero-player-powerStats {
+        font-size: 0.4em;
+    }
+
+    .selectedHero-VS {
+        color: white;
+        font-family: Bebas Neue;
+        -webkit-text-stroke: 3px #252D42;
+        font-size: 3em;
+    }
+
+    .grid-heroes {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 15px;
+        column-gap: 50px;
+        transition: all 1000ms ease;
+    }
+
+    #superhero-img {
+        width: 100px;
+        height:133px;
+    }
+}
+
+@media screen and (max-width:450px){
+    #superhero-img {
+        width: 80px;
+        height:107px;
+    }
 }

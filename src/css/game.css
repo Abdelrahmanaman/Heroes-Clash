@@ -18,6 +18,8 @@
     align-items: center;
     height: 50px;
     width: 200px; 
+    transition: all 1000ms ease;
+    
 }
 
 .rounds-player1 {
@@ -34,7 +36,7 @@
     border: 2px solid white;
     border-radius: 50%; 
     margin: 10px !important;
-
+    transition: all 1000ms ease;
 }
 
 .roundTitle {
@@ -48,6 +50,7 @@
     font-family: Bebas Neue;
     -webkit-text-stroke: 3px #252D42;
     font-size: 4em;
+    transition: all 1000ms ease;
 }
 
 .fight {
@@ -67,16 +70,19 @@
 
 .fight-player1 {
     margin-left: 300px !important;
+    transition: all 1000ms ease;
 }
 
 .fight-player2 {
     margin-right: 300px !important;
+    transition: all 1000ms ease;
 }
 
 .fight-player-img {
     width: 350px;
     border-radius: 20px;
     border: 2px solid white;
+    transition: all 1000ms ease;
 }
 
 .fight-player-powerStats {
@@ -121,4 +127,283 @@
     border: 2px solid white;
     transform: scale(1.5);
     transition: all 1000ms ease;
+}
+
+/*****************    MEDIA QUERIES GAME     *****************/
+@media screen and (max-width: 1600px) {
+    .fight-player1 {
+        margin-left: 250px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 250px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .fight-player1 {
+        margin-left: 200px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 200px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .rounds-player1 {
+        margin-left: 50px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .rounds-player2 {
+        margin-right: 50px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player1 {
+        margin-left: 150px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 150px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .rounds-player1 {
+        margin-left: 40px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .rounds-player2 {
+        margin-right: 40px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player1 {
+        margin-left: 100px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 100px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .rounds-player1 {
+        margin-left: 20px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .rounds-player2 {
+        margin-right: 20px !important;
+        transition: all 1000ms ease;
+    }   
+
+    .fight-player1 {
+        margin-left: 50px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 50px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .rounds-player1 {
+        margin-left: 10px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .rounds-player2 {
+        margin-right: 10px !important;
+        transition: all 1000ms ease;
+    }
+
+    .fight-player1 {
+        margin-left: 30px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 30px !important;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .fight-player-img {
+        width: 300px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rounds-players {
+        width: 175px; 
+        transition: all 1000ms ease;
+    }
+    
+    .round-player {
+        height: 40px;
+        width: 40px;
+        transition: all 1000ms ease;
+    }
+
+    .roundTitle-title {
+        font-size: 3.5em;
+        transition: all 1000ms ease;
+    }
+
+    #btnFight {
+        font-size: 1.2em;
+        width: 80px;
+        height: 80px;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player-img {
+        width: 250px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .rounds-players {
+        width: 150px; 
+        transition: all 1000ms ease;
+    }
+    
+    .round-player {
+        height: 35px;
+        width: 35px;
+        margin: 5px !important;
+        transition: all 1000ms ease;
+    }
+
+    .roundTitle-title {
+        font-size: 3em;
+        transition: all 1000ms ease;
+    }
+
+    #btnFight {
+        font-size: 1.1em;
+        width: 75px;
+        height: 75px;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player-img {
+        width: 200px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rounds-players {
+        width: 125px; 
+        transition: all 1000ms ease;
+    }
+    
+    .round-player {
+        height: 30px;
+        width: 30px;
+        margin: 5px !important;
+        transition: all 1000ms ease;
+    }
+
+    .roundTitle-title {
+        font-size: 2.5em;
+        transition: all 1000ms ease;
+    }
+
+    #btnFight {
+        font-size: 1em;
+        width: 70px;
+        height: 70px;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player-img {
+        width: 175px;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .rounds-players {
+        width: 100px; 
+        transition: all 1000ms ease;
+    }
+    
+    .round-player {
+        height: 25px;
+        width: 25px;
+        margin: 5px !important;
+        transition: all 1000ms ease;
+    }
+
+    #btnFight {
+        font-size: 1em;
+        width: 65px;
+        height: 65px;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player-img {
+        width: 150px;
+        transition: all 1000ms ease;
+    }
+
+    .fight-player-powerStats {
+        font-size: 0.7em;
+        transition: all 1000ms ease;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rounds-player1 {
+        margin-left: 5px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .rounds-player2 {
+        margin-right: 5px !important;
+        transition: all 1000ms ease;
+    }
+
+    .fight-player1 {
+        margin-left: 10px !important;
+        transition: all 1000ms ease;
+    }
+    
+    .fight-player2 {
+        margin-right: 10px !important;
+        transition: all 1000ms ease;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .fight-player-img {
+        width: 125px;
+        transition: all 1000ms ease;
+    }
+
+    .fight-player-powerStats {
+        font-size: 0.5em;
+        transition: all 1000ms ease;
+    }
+
 }
