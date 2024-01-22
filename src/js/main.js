@@ -22,6 +22,10 @@ let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 
+
+
+
+
 console.log("test")
 //* fetching the Api function 
 async function getSuperheroes() {
@@ -55,6 +59,7 @@ async function getSuperheroes() {
            superheroData.filter(superhero => superhero.id !== resp.id);
            localStorage.setItem("playerImg", resp.image.url)
            localStorage.setItem("powerstats", JSON.stringify(resp.powerstats))
+           localStorage.setItem("playerId", resp.id)
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -149,35 +154,49 @@ async function getSuperheroes() {
   // }
   // const game = new SuperHeroGame(100);
   
+
+  const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
+  const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
+
+
+  const selectedId = parseInt(localStorage.getItem("playerId"))
+
+  const computerSelection = superheroIds.filter((id)=> id !== selectedId)
+  
+  const randomIndex = Math.floor(Math.random() * computerSelection.length);
+
 /*****************Valentin********** */
 
-document.addEventListener("DOMContentLoaded", async function () {
   let btnBet = document.getElementById("btnBet");
   let btnFight = document.getElementById("btnFight");
-
-  if (btnFight) {
+  let amountBet = document.getElementById("input-bet.")
+  if (btnBet) {
+    btnBet.addEventListener("click", function () {
+      if(coin < amountBet){
+        console.log("Vous n'avez pas assez de monnaie")
+        coin -= amountBet
+      }else{
+      window.location.href = "game.html";
+  }});
+  }if (btnFight) {
     btnFight.addEventListener("click", async function () {
       const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
       const randomHero = superheroIds[randomHeroIndex];
-      let amountBet = document.getElementById("input-bet")
-      coin -= amountBet
       localStorage.setItem("selectedHero", randomHero);
       window.location.href = "game.html";
     });
   }
-  if (btnBet) {
-    btnBet.addEventListener("click", function () {
-      window.location.href = "game.html";
-    });
-  }
   await recuperateComputer();
-});
+
 async function recuperateComputer() {
   try {
+
+    
+
+
     const computerImg = document.getElementById("computer-img");
-    const selectedHero = localStorage.getItem("selectedHero");
-    if (selectedHero) {
-      const url = `https://superheroapi.com/api/${apiKey}/${selectedHero}`;
+    if (computerImg) {
+      const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
       const result = await fetch(url);
       const resp = await result.json();
       computerImg.src = resp.image.url;
@@ -188,35 +207,18 @@ async function recuperateComputer() {
     console.log("Erreur lors de la récupération du personnage", error);
   }
 }
+//* Setting a to save the player ID to local storage
+const selectedPlayerId = localStorage.getItem("playerId")
 
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
-const selectedPlayerImg = localStorage.getItem('playerImg');
-const playerImg = document.getElementById("player-img")
-
-const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
-const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
-let statSelected = false
-
-if (selectedPlayerImg) {
-  playerImg.src = selectedPlayerImg;
-} else {
-  console.error('Selected superhero image URL not found in localStorage.');
-}
-
-function GameStart () {
-  selectPowerStat = document.getElementById("powerStats-select").value
-  if(selectPowerStat) {
-    statSelected = true
-    console.log("fight")
-    if (statSelected === true) {
-      
-    }
+  const selectedPlayerImg = localStorage.getItem('playerImg');
+  const playerImg = document.getElementById("player-img")
+  if (selectedPlayerImg) {
+    playerImg.src = selectedPlayerImg;
+  } else {
+    console.error('Selected superhero image URL not found in localStorage.');
   }
-  else {
-    alert("Choisir une compétence")
-  }
-}
 
 
 
@@ -227,6 +229,5 @@ function GameStart () {
 console.log(powerstats)
 
 
-const myCoins = document.querySelector(".header-money-amount");
-console.log("test");
+
 
