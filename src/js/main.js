@@ -16,6 +16,8 @@ let durability = document.getElementById("durability")
 let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
+let resp;
+
 
 console.log("test")
 //* fetching the Api function 
@@ -30,7 +32,10 @@ async function getSuperheroes() {
   
         const result = await fetch(url);
         const resp = await result.json();
-        console.log("resp")
+        
+        // const statSelection = document.getElementById("powerStats-select")
+        // const  statValue = statSelection.value
+       
   
         superheroImg[i].src = resp.image.url;
        //* Rendering the chosen Img on the Main selected Img container *//
@@ -45,13 +50,18 @@ async function getSuperheroes() {
           power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
           superheroData = superheroData.filter(superhero => superhero.id !== resp.id);
+          localStorage.setItem('selectedSuperheroImage', resp.image.url);
         });
+        
 
         //* Pushing the heroes API OBJECT REUSE 
         superheroData.push(resp);
-  
-  
       }
+      bet.addEventListener("click", function(){
+          window.location.href = "game.html" 
+      })
+     
+    
       //* Generating a random Img and intailizing the game *//
       // bet.addEventListener("click", function () {
       //   // const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
@@ -64,6 +74,10 @@ async function getSuperheroes() {
     }
   }
   getSuperheroes()
+  
+
+
+
   
 
 
@@ -144,21 +158,47 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-const betGoValue = document.getElementById("input-bet").value 
-bet.addEventListener('click', function(){
-  console.log("Hello")
-})
-if(betGo > 100){
+// const betGoValue = document.getElementById("input-bet").value 
+// bet.addEventListener('click', function(){
+//   console.log("Hello")
+// })
+// if(betGo > 100){
 
-}
-else{
-  console.log("Vous n'avez pas assez d'argent !")
-}
-
-
+// }
+// else{
+//   console.log("Vous n'avez pas assez d'argent !")
+// }
 
 
+///* Fight Page async function to random generate for the computer
 
+// async function fight(){
+//   try{
+//     const computerImg = document.getElementById("computer-img")
+//     const randomIndex = Math.floor(Math.random() * superheroIds.length);
+//     const superheroId = superheroIds[randomIndex];
+//     const url = `https://superheroapi.com/api/${apiKey}/${superheroId}`;
+//     const result = await fetch(url);
+//     const resp = await result.json();
+//     computerImg.src = resp.image.url 
+//   }catch (error){
+//     console.log("error")
+//   }
+//   console.log("fighting")
+// }
+// const fighBtn = document.getElementById("btnFight")
+
+// fighBtn.addEventListener("click",  fight)
+
+
+
+// const storedCoinString = localStorage.getItem('coinValue');
+// const storedCoin = parseInt(storedCoinString, );
+
+
+
+// const myCoin = document.getElementById("coin")
+// myCoin.textContent += storedCoin - 200
 
 
 
@@ -173,9 +213,36 @@ else{
 // //* Creating a function for the game intialization*//
 // const statSelection = document.getElementById("powerStats-select")
 // const  statValue = statSelection.value
-// function initGame(){
-//   if(statValue === ""){
+// const fightBtn = document.getElementById("btnFight")
+// fightBtn.addEventListener("click", function(){
+//   if(statSelection.selectedIndex === 0){
 //     console.log("Please select a stat")
 //   }
+//   else{
+//     console.log("started")
+//     console.log(resp.name)
+    
+//   }
 
-// }
+// })
+// //* Retrieving the img selected in the selection page and bringing it to the game page//
+// const selectedSuperheroImage = localStorage.getItem('selectedSuperheroImage');
+//   const playerImg = document.getElementById("player-img")
+//   if (selectedSuperheroImage) {
+//     playerImg.src = selectedSuperheroImage;
+//   } else {
+//     console.error('Selected superhero image URL not found in localStorage.');
+//   }
+
+
+
+
+// const fightBtn = document.getElementById("btnFight")
+
+// fightBtn.addEventListener("click", function(){
+//   const computerImg = document.getElementById("computer-img")
+//   // const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
+//   // const randomHero = superheroData[randomHeroIndex];
+//   // computerImg.src = randomHero.image.url;
+//   console.log(computerImg)
+// })
