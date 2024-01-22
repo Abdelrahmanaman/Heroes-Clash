@@ -161,7 +161,7 @@ async function getSuperheroes() {
 
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
-const selectedPlayerImg = localStorage.getItem('player-Img');
+const selectedPlayerImg = localStorage.getItem('playerImg');
   const playerImg = document.getElementById("player-img")
   if (selectedPlayerImg) {
     playerImg.src = selectedPlayerImg;
