@@ -48,6 +48,8 @@ async function getSuperheroes() {
           power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
            superheroData.filter(superhero => superhero.id !== resp.id);
+           localStorage.setItem("playerImg", resp.image.url)
+           localStorage.setItem("powerstats", JSON.stringify(resp.powerstats))
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -163,3 +165,7 @@ async function getSuperheroes() {
 
 
 
+
+
+const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
+const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
