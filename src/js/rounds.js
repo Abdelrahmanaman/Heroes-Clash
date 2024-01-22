@@ -24,3 +24,22 @@ function roundThree(winner){
     winner === player ? (pRoundThree.style.backgroundColor = "green", CRoundThree.style.backgroundColor = "red")
     :  (pRoundThree.style.backgroundColor = "red", CRoundThree.style.backgroundColor = "green");
 }
+
+
+
+
+
+
+
+
+
+
+function roundTitle(i) {
+    const titreRound = document.querySelector(".roundTitle-title")
+    titreRound.innerHTML=`Round ${i}`
+}
+
+function updateSelectList (usedValuePreviousRound) {
+    const optionSelected = document.getElementById("usedValuePreviousRound")
+    optionSelected.disabled = true;
+}
