@@ -32,6 +32,7 @@
     border-radius: 50%;
     width: 80px;
     height: 80px;
+    margin-bottom: 150px !important;
 }
 
 .triangle {
@@ -48,11 +49,15 @@
     margin-top: 30%; 
     color: #fff;
 }
-.pllay{
-    background-color: #252D42;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
+
+.rules-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #252D42; */
+    border-radius: 20px;
+    width:300px;
+    
 }
 
 .rules{
@@ -60,13 +65,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid #252D42; */
+    /* border: 2px solid white; */
     border-radius: 20px;
     text-align: justify;
-    margin-top: 150px !important;
     background-color: rgba(114, 139, 169, 0.5);
     padding: 50px 30px !important;
-    width: 300px;
 }
 
 .rules-h1 {
