@@ -144,18 +144,66 @@ async function getSuperheroes() {
   
 /*****************Valentin********** */
 
-const betGoValue = document.getElementById("input-bet").value 
-bet.addEventListener('click', function(){
-  window.location.href = "game.html"
 
-})
-if(betGoValue < coin){
-  
-    
+// let inputBet = document.getElementById("input-bet");
+
+// bet.addEventListener("click", function () {
+//   let betAmount = parseInt(inputBet.value);
+//   if (coin < betAmount || coin === 0) {
+//     console.log("Vous n'avez pas assez d'argent !");
+//   } else {
+//     coin -= betAmount; 
+//     localStorage.setItem("coin", coin);
+//      setTimeout(function () {
+//       window.location.href = "game.html";
+//     }, 3000);
+//   }
+//   async function recuperateComputer(){
+//     try{
+//      const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
+//      const randomHero = superheroIds[randomHeroIndex]
+//      const computerImg = document.getElementById("computer-img")
+//      const url = `https://superheroapi.com/api/${apiKey}/${randomHero}`;
+//      const result = await fetch(url);
+//      const resp = await result.json();
+//      computerImg.src = resp.image.url
+//     }
+//     catch(error){
+//      console.log("erreur")
+//     }
+//    }
+// });
+
+
+// localStorage.setItem("displayed-hero", )
+
+// let fightButton = document.getElementById("btnFight")
+// let statsPlayer1 = document.getElementById("powerStats-select")
+// let statsPlayer2 = 
+// fight.addEventListener("click", function(){
+//   if(statsPlayer1 > statsPlayer2){
+//   console.log("You win")
+//   }else(statsPlayer2 > statsPlayer1);{
+//     console.log("You lose")
+//   }
+// })
+// playerStats
+// fightButton
+
+// compDisplay.src = randomHero.image.url;
+async function recuperateComputer(){
+  try{
+   const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
+   const randomHero = superheroIds[randomHeroIndex]
+   const computerImg = document.getElementById("computer-img")
+   const url = `https://superheroapi.com/api/${apiKey}/${randomHero}`;
+   const result = await fetch(url);
+   const resp = await result.json();
+   computerImg.src = resp.image.url
   }
-else{
-  console.log("Vous n'avez pas assez d'argent !")
-}
-
-
-function gameStart()
+  catch(error){
+   console.log("erreur")
+  }
+ }
+ const btnFight = document.getElementById("btnFight")
+btnFight.addEventListener("click", recuperateComputer)
