@@ -1,6 +1,5 @@
 
-const myCoin = parseInt(document.querySelector(".header-money-amount").textContent);
-console.log(myCoin);
+
 
 
 //* Declaring variable *//
@@ -102,11 +101,6 @@ async function getSuperheroes() {
   // }
 
 
-  // class SuperHeroGame {
-  //   constructor(initialMoney) {
-  //     this.wallet = initialMoney;
-  //     this.powerStats = ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat'];
-  //   }
   
   //   playRound(betAmount) {
   //     if (this.wallet === 0) {
@@ -161,51 +155,56 @@ async function getSuperheroes() {
 
 
   const selectedId = parseInt(localStorage.getItem("playerId"))
+  
+  const selectedPlayerId = localStorage.getItem("playerId")
+
 
   const computerSelection = superheroIds.filter((id)=> id !== selectedId)
   
   const randomIndex = Math.floor(Math.random() * computerSelection.length);
+  console.log(computerSelection)
+
+
 
 /*****************Valentin********** */
-document.addEventListener("DOMContentLoaded", async function () {
-  let wallet = document.getElementById("coin");
-  let coin = parseInt(localStorage.getItem("mycoinz"));
-  wallet.textContent = coin;
 
-  let inputBet = document.getElementById("input-bet");
-  let bet = document.getElementById("btnBet");
+
+  // let inputBet = document.getElementById("input-bet");
   let btnFight = document.getElementById("btnFight");
 
-  bet.addEventListener("click", function () {
-    let betAmount = parseInt(inputBet.value);
+  // bet.addEventListener("click", function () {
+  //   let betAmount = parseInt(inputBet.value);
 
-    if (coin < betAmount || coin === 0) {
-      console.log("Vous n'avez pas assez d'argent !");
-    } else {
-      coin -= betAmount;
-      wallet.textContent = coin;
-      localStorage.setItem("coin", coin);
+  //   if (coin < betAmount || coin === 0) {
+  //     console.log("Vous n'avez pas assez d'argent !");
+  //   } else {
+  //     coin -= betAmount;
+  //     wallet.textContent = coin;
+  //     localStorage.setItem("coin", coin);
 
-      setTimeout(function () {
-        window.location.href = "game.html";
-      }, 3000);
-    }
-  });
+  //     setTimeout(function () {
+  //       window.location.href = "game.html";
+  //     }, 3000);
+  //   }
+  // });
 
-  if (btnFight) {
-    btnFight.addEventListener("click", async function () {
-      try {
-        const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
-        const randomHero = superheroIds[randomHeroIndex];
-        localStorage.setItem("selectedHero", randomHero);
-        await recuperateComputer();
-        window.location.href = "game.html";
-      } catch (error) {
-        console.error("Erreur lors du combat", error);
-      }
-    });
-  }
-});
+  // if (btnFight) {
+  //   btnFight.addEventListener("click", async function () {
+  //     try {
+  //       const randomHeroIndex = Math.floor(Math.random() * superheroIds.length);
+  //       const randomHero = superheroIds[randomHeroIndex];
+  //       localStorage.setItem("selectedHero", randomHero);
+  //       await recuperateComputer();
+  //       window.location.href = "game.html";
+  //     } catch (error) {
+  //       console.error("Erreur lors du combat", error);
+  //     }
+  //   });
+  // }
+btnFight.addEventListener("click", recuperateComputer)
+
+
+
 
 async function recuperateComputer() {
   try {
@@ -223,7 +222,6 @@ async function recuperateComputer() {
   }
 }
 //* Setting a to save the player ID to local storage
-const selectedPlayerId = localStorage.getItem("playerId")
 
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
@@ -235,14 +233,7 @@ const selectedPlayerId = localStorage.getItem("playerId")
     console.error('Selected superhero image URL not found in localStorage.');
   }
 
-
-
-
-
-
-
-console.log(powerstats)
-
+  
 
 
 
