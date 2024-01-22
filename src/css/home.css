@@ -35,6 +35,31 @@
     margin-bottom: 150px !important;
 }
 
+.play-buttonV2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color:#252D42;
+    color: white;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.2em;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+    padding: 5px !important;
+    margin-bottom: 150px !important;
+}
+
+.play-buttonV2 a {
+    text-decoration: none;
+}
+
 .triangle {
     width: 0;
     height: 0;
@@ -46,6 +71,11 @@
 }
 
 .play-button p {
+    margin-top: 30%; 
+    color: #fff;
+}
+
+.play-buttonV2 p {
     margin-top: 30%; 
     color: #fff;
 }
