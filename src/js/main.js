@@ -172,23 +172,23 @@ async function getSuperheroes() {
 
 ///* Fight Page async function to random generate for the computer
 
-// async function fight(){
-//   try{
-//     const computerImg = document.getElementById("computer-img")
-//     const randomIndex = Math.floor(Math.random() * superheroIds.length);
-//     const superheroId = superheroIds[randomIndex];
-//     const url = `https://superheroapi.com/api/${apiKey}/${superheroId}`;
-//     const result = await fetch(url);
-//     const resp = await result.json();
-//     computerImg.src = resp.image.url 
-//   }catch (error){
-//     console.log("error")
-//   }
-//   console.log("fighting")
-// }
-// const fighBtn = document.getElementById("btnFight")
+async function fight(){
+  try{
+    const computerImg = document.getElementById("computer-img")
+    const randomIndex = Math.floor(Math.random() * superheroIds.length);
+    const superheroId = superheroIds[randomIndex];
+    const url = `https://superheroapi.com/api/${apiKey}/${superheroId}`;
+    const result = await fetch(url);
+    const resp = await result.json();
+    computerImg.src = resp.image.url 
+  }catch (error){
+    console.log("error")
+  }
+  console.log("fighting")
+}
+const fighBtn = document.getElementById("btnFight")
 
-// fighBtn.addEventListener("click",  fight)
+fighBtn.addEventListener("click",  fight)
 
 
 
