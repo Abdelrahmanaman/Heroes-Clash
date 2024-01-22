@@ -48,6 +48,8 @@ async function getSuperheroes() {
           power.textContent = `Power: ${resp.powerstats.power}`
           console.log(resp.name)
            superheroData.filter(superhero => superhero.id !== resp.id);
+           localStorage.setItem("playerImg", resp.image.url)
+           localStorage.setItem("powerstats", JSON.stringify(resp.powerstats))
         });
 
         //* Pushing the heroes API OBJECT REUSE 
@@ -57,10 +59,7 @@ async function getSuperheroes() {
       }
       //* Generating a random Img and intailizing the game *//
       bet.addEventListener("click", function () {
-        const randomHeroIndex = Math.floor(Math.random() * superheroData.length);
-        const randomHero = superheroData[randomHeroIndex];
-        compDisplay.src = randomHero.image.url;
-        console.log(superheroData)
+        location.href = "game.html"
       });
     } catch (error) {
       // console.error(`Error: ${error}`);
@@ -161,8 +160,20 @@ async function getSuperheroes() {
 // }
 
 
-// CountQueuingStrategy computerImg = document
+// //* Retrieving the img selected in the selection page and bringing it to the game page//
+const selectedPlayerImg = localStorage.getItem('playerImg');
+  const playerImg = document.getElementById("player-img")
+  if (selectedPlayerImg) {
+    playerImg.src = selectedPlayerImg;
+  } else {
+    console.error('Selected superhero image URL not found in localStorage.');
+  }
 
 
 
 
+
+
+
+const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
+const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
