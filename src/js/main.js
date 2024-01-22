@@ -18,6 +18,17 @@ let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 let resp;
 
+localStorage.setItem("coinCount", coin.toString());
+ coin = parseInt(localStorage.getItem("coinCount")) || 0;
+ 
+ const wallet = document.getElementById("coin")
+ 
+ wallet.textContent += coin
+ wallet.textContent += coin 
+ console.log(typeof coin)
+
+
+
 
 console.log("test")
 //* fetching the Api function 
