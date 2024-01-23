@@ -14,7 +14,7 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 500
+let coin = 100
 // document.getElementById("coin").innerHTML = coin
 // localStorage.setItem("coin",coin)
 let intelligence = document.getElementById("intelligence")
