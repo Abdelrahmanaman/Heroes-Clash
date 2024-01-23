@@ -21,6 +21,7 @@ let durability = document.getElementById("durability")
 let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
+const fightBtn = document.getElementById("btnFight")
 
         
 
@@ -165,6 +166,8 @@ async function getSuperheroes() {
   
   const randomIndex = Math.floor(Math.random() * computerSelection.length);
 
+
+ 
 
 
 
