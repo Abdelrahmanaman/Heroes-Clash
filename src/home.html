@@ -28,7 +28,7 @@
                 </div>
                 <div class="header-money">
                     <p class="header-money-dollar">$</p>
-                    <p class="header-money-amount">1OO</p>
+                    <p class="header-money-amount" id="coin"></p>
                 </div>
             </div>
         </header>   
@@ -54,9 +54,8 @@
     </div>
     </div>
     <script src="https://kit.fontawesome.com/faea934ca3.js" crossorigin="anonymous"></script>
-    <script>let coin = 500
-        document.getElementById("coin").innerHTML = coin
-        localStorage.setItem("coin",coin)</script>
+    <script> let coin = parseInt(localStorage.getItem("coin"));
+        document.getElementById("coin").innerHTML = coin;</script>
 </body>
 
 </html>
