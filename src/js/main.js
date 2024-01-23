@@ -21,6 +21,7 @@ let durability = document.getElementById("durability")
 let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
+const fightBtn = document.getElementById("btnFight")
 
         
 
@@ -186,6 +187,9 @@ const betInput = document.getElementById("input-bet");
       window.location.href = "game.html";
     }
   });
+
+  fightBtn.addEventListener("click", recuperateComputer)
+ 
 
 
 // async function recuperateComputer() {

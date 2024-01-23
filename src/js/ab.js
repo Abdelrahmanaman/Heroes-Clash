@@ -18,4 +18,4 @@ fightBtn.addEventListener("click", recuperateComputer)
       } catch (error) {
         console.log("Erreur lors de la récupération du personnage", error);
       }
-    }
+}
