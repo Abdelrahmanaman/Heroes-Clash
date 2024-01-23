@@ -22,6 +22,7 @@ let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
 
+        
 
 
 
