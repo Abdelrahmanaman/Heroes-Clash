@@ -59,11 +59,3 @@ function changeRound() {
 // btnFight.addEventListener("click", () => {
 //     changeRound()
 // })
-
-
-
-
-
-
-
-
