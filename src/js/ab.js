@@ -1,5 +1,7 @@
-const fightBtn = document.getElementById("btnFight")    
-
+const fightBtn = document.getElementById("btnFight")       
+const selectedId = parseInt(localStorage.getItem("playerId"))
+const computerSelection = superheroIds.filter((id)=> id !== selectedId)
+const randomIndex = Math.floor(Math.random() * computerSelection.length);
 
 fightBtn.addEventListener("click", recuperateComputer)
    async function recuperateComputer() {
