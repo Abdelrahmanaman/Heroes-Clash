@@ -201,9 +201,15 @@ async function getSuperheroes() {
   //     }
   //   });
   // }
-btnFight.addEventListener("click", recuperateComputer)
+
+  btnFight.addEventListener("click", recuperateComputer)
 
 
+/*****************Valentin********** */  
+// btnFight.addEventListener("click", () => {
+//   recuperateComputer()
+//   changeRound()
+// })
 
 
 async function recuperateComputer() {
