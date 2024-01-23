@@ -188,7 +188,6 @@ const betInput = document.getElementById("input-bet");
     }
   });
 
-  fightBtn.addEventListener("click", recuperateComputer)
  
 
 
