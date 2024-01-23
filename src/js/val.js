@@ -1,11 +1,10 @@
-const betInput = document.getElementById("input-bet");
-  const btnBet = document.getElementById("btnBet");
+  const betInput = document.getElementById("input-bet");
   const coinValue = document.getElementById("coin");
-
-  coin = parseInt(localStorage.getItem("coin")) 
+  coin = parseInt(localStorage.getItem("coin"));
   coinValue.textContent = coin;
+  
+  bet.addEventListener("click", function () {
 
-  btnBet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
 
     if (input > coin || coin === 0) {
@@ -17,6 +16,10 @@ const betInput = document.getElementById("input-bet");
       window.location.href = "game.html";
     }
   });
+
+
+
+  
   // async function recuperateComputer() {
 //   try {
 //     const computerImg = document.getElementById("computer-img");

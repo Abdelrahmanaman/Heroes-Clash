@@ -19,7 +19,7 @@ let comPower = document.getElementById("com-power")
 let comDurability = document.getElementById("com-durability")
 let comSpeed = document.getElementById("com-speed")
 let comCombat = document.getElementById("com-combat")
-let comStrength = document.getElementById("strength")
+let comStrength = document.getElementById("com-strength")
 const fightBtn = document.getElementById("btnFight")
 const selectedId = parseInt(localStorage.getItem("playerId"))
 const computerSelection = superheroIds.filter((id)=> id !== selectedId)
@@ -48,5 +48,5 @@ fightBtn.addEventListener("click", recuperateComputer)
       } catch (error) {
         console.log("Erreur lors de la récupération du personnage", error);
       }
-      
+   
 }
