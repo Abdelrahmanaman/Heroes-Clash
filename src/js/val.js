@@ -33,3 +33,5 @@ const betInput = document.getElementById("input-bet");
 //   }
 // }
 //* Setting a to save the player ID to local storage
+
+let coin = 100
