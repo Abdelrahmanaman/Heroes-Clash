@@ -34,7 +34,7 @@ function roundTitle(i) {
     titreRound.innerHTML=`Round ${i}`
 }
 
-// Désactive l'option de la liste de selection, utilisé lors du roud précédent
+// Désactive l'option de la liste de selection, utilisée lors du roud précédent
 // l'option en question est envoyé par le résultat du round précédent
 function updateSelectList (usedValuePreviousRound) {
     const optionSelected = document.getElementById(`${usedValuePreviousRound}`)
