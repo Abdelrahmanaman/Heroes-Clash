@@ -155,7 +155,7 @@ async function getSuperheroes() {
 
 
   const selectedId = parseInt(localStorage.getItem("playerId"))
-  
+
   const selectedPlayerId = localStorage.getItem("playerId")
 
 
@@ -225,7 +225,6 @@ async function recuperateComputer() {
 
 
 // //* Retrieving the img selected in the selection page and bringing it to the game page//
-//<<<<<<< HEAD
 const selectedPlayerImg = localStorage.getItem('playerImg');
 const playerImg = document.getElementById("player-img")
 if (selectedPlayerImg) {
