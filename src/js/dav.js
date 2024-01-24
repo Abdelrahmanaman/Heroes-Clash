@@ -5,6 +5,12 @@ const cRoundOne = document.getElementById("c-round1")
 const cRoundTwo = document.getElementById("c-round2")
 const CRoundThree = document.getElementById("c-round3")
 
+let playerPoints = 0
+let computerPoints = 0
+
+let numRound = 1
+
+
 //***********************************  Function to trigger the rounds color results *****************************//
 
 //* Fonction Test
@@ -13,19 +19,45 @@ const CRoundThree = document.getElementById("c-round3")
 //     cRoundOne.style.backgroundColor = "Red"
 // })
 
-function roundOne(winner){
-    winner === "player" ? (pRoundOne.style.backgroundColor = "green", cRoundOne.style.backgroundColor = "red")
-    :  (pRoundOne.style.backgroundColor = "red", cRoundOne.style.backgroundColor = "green");
-}
-function roundTwo(winner){
-    winner === "player" ? (pRoundTwo.style.backgroundColor = "green", cRoundTwo.style.backgroundColor = "red")
-    :  (pRoundTwo.style.backgroundColor = "red", cRoundTwo.style.backgroundColor = "green");
+// function roundOne(winner){
+//     winner === "player" ? (pRoundOne.style.backgroundColor = "green", cRoundOne.style.backgroundColor = "red", playerPoints += 1)
+//     :  (pRoundOne.style.backgroundColor = "red", cRoundOne.style.backgroundColor = "green", computerPoints +=1);
+// }
+// function roundTwo(winner){
+//     winner === "player" ? (pRoundTwo.style.backgroundColor = "green", cRoundTwo.style.backgroundColor = "red", playerPoints += 1)
+//     :  (pRoundTwo.style.backgroundColor = "red", cRoundTwo.style.backgroundColor = "green", computerPoints +=1);
+// }
+
+// function roundThree(winner){
+//     winner === "player" ? (pRoundThree.style.backgroundColor = "green", CRoundThree.style.backgroundColor = "red", playerPoints += 1)
+//     :  (pRoundThree.style.backgroundColor = "red", CRoundThree.style.backgroundColor = "green", computerPoints +=1);
+// }
+
+function roundWinner(winner){
+    if (numRound === 1)
+    {
+    winner === "player" ? (pRoundOne.style.backgroundColor = "green", cRoundOne.style.backgroundColor = "red", playerPoints += 1)
+    :  (pRoundOne.style.backgroundColor = "red", cRoundOne.style.backgroundColor = "green", computerPoints +=1);
+    }
+    if (numRound === 2)
+    {
+    winner === "player" ? (pRoundTwo.style.backgroundColor = "green", cRoundTwo.style.backgroundColor = "red", playerPoints += 1)
+    :  (pRoundTwo.style.backgroundColor = "red", cRoundTwo.style.backgroundColor = "green", computerPoints +=1);
+    }
+    if (numRound === 3)
+    {
+    winner === "player" ? (pRoundThree.style.backgroundColor = "green", CRoundThree.style.backgroundColor = "red", playerPoints += 1)
+    :  (pRoundThree.style.backgroundColor = "red", CRoundThree.style.backgroundColor = "green", computerPoints +=1);
+    }
 }
 
-function roundThree(winner){
-    winner === "player" ? (pRoundThree.style.backgroundColor = "green", CRoundThree.style.backgroundColor = "red")
-    :  (pRoundThree.style.backgroundColor = "red", CRoundThree.style.backgroundColor = "green");
-}
+
+
+
+
+
+
+
 
 
 //***********************************  Function to Change Title Round *****************************//
@@ -34,6 +66,15 @@ function roundTitle(round) {
     titreRound.innerHTML=`Round ${round}`
 }
 
+
+
+
+
+
+
+
+
+
 //***********************************  Function Désactive l'option de la liste de selection, utilisée lors du roud précédent *****************************//
 // l'option en question est envoyé par le résultat du round précédent
 function updateSelectList (usedValuePreviousRound) {
@@ -41,24 +82,85 @@ function updateSelectList (usedValuePreviousRound) {
     optionSelected.disabled = true;
 }
 
-let numRound = 1
-// let powerStatPlayerRoundOne = "intelligence"
-// let winnerRound = "player"
 
 
-function changeRound() {
-    if (numRound === 1) {
-        roundOne(winnerRound)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
-        updateSelectList(powerStatPlayerRoundOne) ////winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
-        roundTitle(2)
-        numRound = 2
+
+
+
+
+
+
+//***********************************  Function pour Déclarer le vainqueur Final *****************************//
+
+function declarerWinner () {
+    console.log(localStorage.getItem("bet"))
+    if (playerPoints > computerPoints)
+    {
+        console.log("Player est vainqueur") // à remplacer par une insertion HTML
+        coin = coin + 2*(localStorage.getItem("bet"))
+        console.log(coin)
+        localStorage.setItem("coin", coin)
+        if (parseInt(localStorage.getItem("coin")))
+        {
+        coin = parseInt(localStorage.getItem("coin")) 
+        const coinValue = document.getElementById("coin");
+        coinValue.textContent = coin;
+        }
+        else
+        {
+        coinValue.textContent = coin;
+        }
+    }
+    else
+    {
+        console.log("Computer est vainqueur") // à remplacer par une insertion HTML
     }
 }
 
-// let btnFight = document.getElementById("btnFight");
-// btnFight.addEventListener("click", () => {
-//     changeRound()
-// })
+
+
+
+
+
+
+
+//***********************************  Function Changer de Round à l'issue du combat *****************************//
+
+let powerStatPlayerRoundOne = "intelligence"
+let winnerRound = "player"
+
+
+function changeRound(i) {
+    if (i < 3) {
+        roundWinner(winnerRound)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        updateSelectList(powerStatPlayerRoundOne) ////winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        roundTitle(i += 1)
+        console.log(i)
+        numRound += 1
+        console.log(playerPoints)
+        console.log(computerPoints)
+        return(numRound)
+    }
+
+    if (i = 3)
+    {
+        roundWinner(winnerRound)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        declarerWinner()
+    }
+}
+
+
+
+
+
+
+
+
+
+let btnFight = document.getElementById("btnFight");
+btnFight.addEventListener("click", () => {
+    changeRound(numRound)
+})
 
 
 
