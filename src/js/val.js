@@ -3,7 +3,6 @@ document.getElementById("coin").innerHTML = coin;
 const betInput = document.getElementById("input-bet");
 const coinValue = document.getElementById("coin");
 const bet = document.getElementById("btnBet")
-
 bet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
 
