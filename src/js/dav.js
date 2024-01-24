@@ -97,7 +97,7 @@ function declarerWinner () {
     console.log(localStorage.getItem("bet"))
     if (playerPoints > computerPoints)
     {
-        console.log("Player est vainqueur") // à remplacer par une insertion HTML
+        console.log("Player est vainqueur")
         coin = coin + 2*(localStorage.getItem("bet"))
         console.log(coin)
         localStorage.setItem("coin", coin)
@@ -114,7 +114,7 @@ function declarerWinner () {
     }
     else
     {
-        console.log("Computer est vainqueur") // à remplacer par une insertion HTML
+        console.log("Computer est vainqueur")
     }
 }
 
