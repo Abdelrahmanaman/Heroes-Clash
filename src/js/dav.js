@@ -94,9 +94,16 @@ function updateSelectList (usedValuePreviousRound) {
 
 function declarerWinner () {
     console.log(localStorage.getItem("bet"))
+    const resultMessage = document.getElementById("resultMessage");
+    resultMessage.style.color = "white"
+    resultMessage.style.height = "100px"
+    resultMessage.style.width = "300px"
+
+
     if (playerPoints > computerPoints)
     {
-        console.log("Player est vainqueur") // à remplacer par une insertion HTML
+        console.log("Player est vainqueur")
+        resultMessage.innerHTML = "Congratulations! You are the winner!";
         coin = coin + 2*(localStorage.getItem("bet"))
         console.log(coin)
         localStorage.setItem("coin", coin)
@@ -109,14 +116,16 @@ function declarerWinner () {
         else
         {
         coinValue.textContent = coin;
+        
         }
     }
     else
     {
-        console.log("Computer est vainqueur") // à remplacer par une insertion HTML
+        console.log("Computer est vainqueur")
+        resultMessage.innerHTML = "Looooooooser!";
+
     }
 }
-
 
 
 
