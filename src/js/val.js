@@ -1,8 +1,7 @@
-let coin = parseInt(localStorage.getItem("coin")) || 500
+coin = parseInt(localStorage.getItem("coin")) || 500
 document.getElementById("coin").innerHTML = coin
 const betInput = document.getElementById("input-bet")
 const coinValue = document.getElementById("coin")
-const bet = document.getElementById("btnBet")
 
 if (parseInt(localStorage.getItem("coin")))
 {
