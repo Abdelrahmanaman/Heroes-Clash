@@ -95,8 +95,6 @@ function updateSelectList (usedValuePreviousRound) {
 function declarerWinner () {
     console.log(localStorage.getItem("bet"))
     const resultMessage = document.getElementById("resultMessage");
-    resultMessage.style.color = "white"
- 
 
     if (playerPoints > computerPoints)
     {
