@@ -89,6 +89,15 @@ const computerSelection = superheroIds.filter((id) => id !== selectedId)
 
 const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
 const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
+console.log(typeof powerstats)
+
+// Object.keys(powerstats).forEach(function(cle){
+//   console.log(cle + "" + powerstats[cle])
+// })
+// // const selectedValues = powerstats.value.split('');
+// console.log(selectedValues[1])
+// const intelValue = parseInt(selectedValues[1])
+
 
 const selectedPlayerId = localStorage.getItem("playerId")
 
@@ -125,26 +134,32 @@ async function recuperateComputer() {
 }
 fightBtn.addEventListener("click", recuperateComputer)
 
+
+
+
 function CompareStats() {
-  console.log("coucou")
-  let selectPowerStat = document.getElementById("powerStats-select").value
-  console.log(selectPowerStat)
+  let selectPowerStat = document.getElementById("powerStats-select")
+  
+  Object.keys(selectPowerStat).forEach(function(cle){
+    console.log(cle + "" + selectPowerStat[cle])
+  })
+
+  let intelValuePLayer = parseInt(selectPowerStat.intelligence) 
+  
+
+  if(intelValuePLayer < 100) {
+    console.log("fight")
+  }
+  // console.log(typeof selectPowerStatNumb)
+  const currentPlayerStats = selectPowerStat.value
+  parseInt(currentPlayerStats)
+  // console.log(currentPlayerStats)
   let selectedStat = false
-  let compStats = document.getElementById("comp-powerStats").value
-  console.log()
-  compStats.value = selectPowerStat.value 
-  console.log("radnom")
+  let compStats = document.getElementById("comp-powerStats")
+  let currentComptStats = compStats.value
+  // console.log(currentComptStats)
   if (selectPowerStat) {
-    console.log("hello")
-    console.log("hello2")
-    compStats = selectPowerStat.value
-    console.log(compStats)
-  }
-  if(selectPowerStat > compStats) {
-    alert("round gagné")
-  }
-  if (selectPowerStat < compStats) {
-    alert("round perdu")
+    compStats.value = selectPowerStat.value 
   }
 }
 
