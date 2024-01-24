@@ -18,11 +18,9 @@ bet.addEventListener("click", function () {
     }
 });
 
-// const selectedPlayerImg = localStorage.getItem('playerImg');
-//   const playerImg = document.getElementById("player-img")
-//   if (selectedPlayerImg) {
-//     playerImg.src = selectedPlayerImg;
-//   } else {
-//     console.error('Selected superhero image URL not found in localStorage.');
-//   }
+function afficherMessage(){
+    const resultMessage = document.getElementById("resultMessage")
+    
+}
+
 

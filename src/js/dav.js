@@ -90,7 +90,6 @@ function updateSelectList (usedValuePreviousRound) {
 
 
 
-
 //***********************************  Function pour Déclarer le vainqueur Final *****************************//
 
 function declarerWinner () {
