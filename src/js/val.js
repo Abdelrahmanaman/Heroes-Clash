@@ -1,4 +1,4 @@
-let coin = parseInt(localStorage.getItem("coin")) || 100;
+let coin = parseInt(localStorage.getItem("coin")) || 500;
 document.getElementById("coin").innerHTML = coin;
 const betInput = document.getElementById("input-bet");
 const coinValue = document.getElementById("coin");
@@ -25,7 +25,7 @@ bet.addEventListener("click", function () {
         coin -= input;
         coinValue.textContent = coin;
 
-        localStorage.setItem("coin", coin);
+        localStorage.getItem("coin", coin);
 
         window.location.href = "game.html";
     }
@@ -33,7 +33,7 @@ bet.addEventListener("click", function () {
 
 function afficherMessage(){
     const resultMessage = document.getElementById("resultMessage")
-    if (estGagnant) {
+    if (declarerWinner) {
         resultMessage.textContent = "Congratulations! You are the winner!";
     } else {
         resultMessage.textContent = "Looooooooser!";
