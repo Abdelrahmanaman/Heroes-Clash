@@ -107,6 +107,7 @@ strength.textContent = `Strength: ${powerstats.strength}`
 speed.textContent = `Speed: ${powerstats.speed}`
 durability.textContent = `Durability: ${powerstats.durability}`
 power.textContent = `Power: ${powerstats.power}`
+combat.textContent = `Combat: ${powerstats.combat}`
 
 
 
@@ -130,7 +131,7 @@ async function recuperateComputer() {
 
       //* Update computer image
       computerImg.src = resp.image.url;
-
+      
       //* Get the selected power stat for the player
       const playerPowerstats = JSON.parse(localStorage.getItem("powerstats"));
       const powerStatsSelect = document.getElementById("powerStats-select");
@@ -138,7 +139,7 @@ async function recuperateComputer() {
       localStorage.setItem("selectedPowerStatPlayer", selectedPowerStat)
 
       //* Set the selected power stat for the computer
-      const computerPowerStatsSelect = document.getElementById("-comp-powerStats");
+      const computerPowerStatsSelect = document.getElementById("comp-powerStats");
       computerPowerStatsSelect.value = selectedPowerStat;
 
       //* Update computer power stats
@@ -153,20 +154,43 @@ async function recuperateComputer() {
       let playerPowerStatValue = parseInt(playerPowerstats[selectedPowerStat]);
       const computerPowerStatValue = parseInt(resp.powerstats[selectedPowerStat]);
 
+      const messageRound = document.querySelector(".messageRoundHidden");
+      const resultRound = document.getElementById("resultRound");
+
+
+
       //* Replace this with your own logic to declare the winner
       if (playerPowerStatValue > computerPowerStatValue) {
         console.log(`Player: ${playerPowerStatValue} WINS & Computer:${computerPowerStatValue}`);
         localStorage.setItem("winnerRound", "player")
+        messageRound.classList.replace("messageRoundHidden", "messageRound")
+        resultRound.innerHTML = "Congratulations! You win this round!";
+        computerPowerStatsSelect.style.display = "block"
+        computerPowerStatsSelect.style.pointerEvents = "none"
+        powerStatsSelect.style.pointerEvents = "none"
       } else if (playerPowerStatValue === computerPowerStatValue) {
         console.log(`Player: ${playerPowerStatValue} & Computer:${computerPowerStatValue} TIE`);
-        localStorage.setItem("winnerRound", "aucun")
+        localStorage.setItem("winnerRound", "player")
+        messageRound.classList.replace("messageRoundHidden", "messageRound")
+        resultRound.innerHTML = "Congratulations! You win this round!";
+        computerPowerStatsSelect.style.display = "block"
+        computerPowerStatsSelect.style.pointerEvents = "none"
+        powerStatsSelect.style.pointerEvents = "none"
       } else {
         console.log(`Player: ${playerPowerStatValue} & Computer:${computerPowerStatValue} Wins`);
         localStorage.setItem("winnerRound", "computer")
+        messageRound.classList.replace("messageRoundHidden", "messageRound")
+        resultRound.innerHTML = "You lost this round!";
+        computerPowerStatsSelect.style.display = "block"
+        computerPowerStatsSelect.style.pointerEvents = "none"
+        powerStatsSelect.style.pointerEvents = "none"
       }
+
     } else {
       console.error("Aucun personnage sélectionné.");
+      
     }
+    
     // return(selectedPowerStat)
   } catch (error) {
     console.log("Erreur lors de la récupération du personnage", error);

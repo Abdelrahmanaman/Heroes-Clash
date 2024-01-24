@@ -95,7 +95,6 @@ function updateSelectList (usedValuePreviousRound) {
 function declarerWinner () {
     console.log(localStorage.getItem("bet"))
     const messageWinner = document.querySelector(".messageWinnerHidden");
-    console.log(messageWinner)
     const resultMessage = document.getElementById("resultMessage");
 
     if (playerPoints > computerPoints)
@@ -176,6 +175,15 @@ console.log(winnerRoundIs)
 
 let btnFight = document.getElementById("btnFight");
 btnFight.addEventListener("click", () => {
+    const powerStatsSelect = document.getElementById("powerStats-select");
+    const computerPowerStatsSelect = document.getElementById("comp-powerStats");
+    const messageRound = document.querySelector(".messageRound");
+    const resultRound = document.getElementById("resultRound");
+    computerPowerStatsSelect.style.display = "none"
+    computerPowerStatsSelect.style.pointerEvents = ""
+    powerStatsSelect.style.pointerEvents = ""
+    messageRound.classList.replace("messageRound", "messageRoundHidden")
+    resultRound.textContent = ""
     changeRound(numRound)
 })
 

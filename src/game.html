@@ -81,10 +81,10 @@
                     <button id="btnFight">!! FIGHT !!</button>
                 </div>
                 <div class="fight-player fight-player2">
-                    <img id="computer-img"class="fight-player-img fight-player2-img" src="../assets/img/Unknown.png"
+                    <img id="computer-img" class="fight-player-img fight-player2-img" src="../assets/img/Unknown.png"
                         alt="Image de Batman" />
-                        <div class="fight-player-powerStats fight-player1-powerStats">
-                            <select name="powerStats" id="-comp-powerStats">
+                        <div class="fight-player-powerStats fight-player2-powerStats">
+                            <select name="powerStats" id="comp-powerStats"  style="display: none">
                                 <option value="">--Please choose a PowerStats--</option>
                                 <option id="com-intelligence" value="intelligence">Intelligence</option>
                                 <option id="com-strength" value="strength">Strength</option>
@@ -95,6 +95,9 @@
                             </select>
                         </div>
                 </div>
+            </div>
+            <div class="messageRoundHidden">
+                <p id="resultRound"></p>
             </div>
             <div class="messageWinnerHidden">
                 <p id="resultMessage"></p>

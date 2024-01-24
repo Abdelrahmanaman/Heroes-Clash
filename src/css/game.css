@@ -4,25 +4,7 @@
 
 
 /*****************    GAME - ZONE DE COMPTAGE DES POINTS     *****************/
-.messageWinner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-family: Bebas Neue;
-    -webkit-text-stroke: 1px #252D42;
-    font-size: 2em;
-}
 
-#play_again {
-    text-decoration: none;
-    color: #252D42;
-    -webkit-text-stroke: 1px white;
-}
-
-.messageWinnerHidden {
-    display: none;
-}
 
 .roundCount {
     display: flex;
@@ -127,6 +109,11 @@
     padding: 2px 10px !important;
 }
 
+#comp-powerStats {
+    color: #252D42;
+    padding: 20px;
+    border-radius: 20px;
+}
 
 #btnFight {
     color: #252D42;
@@ -147,6 +134,40 @@
     border: 2px solid white;
     transform: scale(1.5);
     transition: all 1000ms ease;
+}
+
+.messageRoundHidden {
+    display: none;
+}
+
+.messageRound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 1px #252D42;
+    font-size: 2em;
+}
+
+.messageWinnerHidden {
+    display: none;
+}
+
+.messageWinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 1px #252D42;
+    font-size: 2em;
+}
+
+#play_again {
+    text-decoration: none;
+    color: #252D42;
+    -webkit-text-stroke: 1px white;
 }
 
 /*****************    MEDIA QUERIES GAME     *****************/
