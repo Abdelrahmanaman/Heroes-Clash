@@ -6,20 +6,7 @@
 const betInput = document.getElementById("input-bet");
 const btnBet = document.getElementById("btnBet");
 const coinValue = document.getElementById("coin");
-
-
-if (parseInt(localStorage.getItem("coin")))
-{
-coin = parseInt(localStorage.getItem("coin")) 
-coinValue.textContent = coin;
-}
-else
-{
-coinValue.textContent = coin;
-}
-
-
-
+const bet = document.getElementById("btnBet")
 bet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
     if (!input)
@@ -30,14 +17,15 @@ bet.addEventListener("click", function () {
     {
     localStorage.setItem("bet", input);
 
-    if (input > coin || coin === 0) {
+    if (!input) {
+        console.log("Vous n'avez pas misé");
+    } else if (input > coin || coin === 0) {
         console.log("Vous n'avez pas assez d'argent !");
     } else {
         coin -= input;
         coinValue.textContent = coin;
 
         localStorage.setItem("coin", coin);
-
         window.location.href = "game.html";
     }
   }
@@ -45,7 +33,12 @@ bet.addEventListener("click", function () {
 
 function afficherMessage(){
     const resultMessage = document.getElementById("resultMessage")
-    
+    if (estGagnant) {
+        resultMessage.textContent = "Congratulations! You are the winner!";
+    } else {
+        resultMessage.textContent = "Looooooooser!";
+    }
 }
+
 
 
