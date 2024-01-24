@@ -18,6 +18,7 @@ else
 coinValue.textContent = coin
 }
 
+if (bet) {
 bet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
 
@@ -34,6 +35,7 @@ bet.addEventListener("click", function () {
         window.location.href = "game.html"
     }
 })
+}
 
 
 function afficherMessage() {

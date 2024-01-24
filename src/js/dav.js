@@ -134,8 +134,14 @@ function declarerWinner () {
 
 //***********************************  Function Changer de Round à l'issue du combat *****************************//
 
-let powerStatPlayerRoundOne = "speed"
-let winnerRound = "player"
+let powerStatPlayerRoundOne = selectedPowerStat
+if (playerPowerStatValue) { 
+    winnerRound= "player"
+}
+else {
+    winnerRound = "computer"
+}
+
 
 
 function changeRound(i) {
@@ -156,11 +162,6 @@ function changeRound(i) {
         declarerWinner()
     }
 }
-
-
-
-
-
 
 
 
