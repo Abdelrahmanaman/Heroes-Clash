@@ -4,6 +4,15 @@
 
 
 /*****************    GAME - ZONE DE COMPTAGE DES POINTS     *****************/
+.messageWinner {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Bebas Neue;
+    -webkit-text-stroke: 1px #252D42;
+    font-size: 2em;
+}
+
 .roundCount {
     display: flex;
     justify-content: space-between;

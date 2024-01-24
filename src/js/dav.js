@@ -96,9 +96,7 @@ function declarerWinner () {
     console.log(localStorage.getItem("bet"))
     const resultMessage = document.getElementById("resultMessage");
     resultMessage.style.color = "white"
-    resultMessage.style.height = "100px"
-    resultMessage.style.width = "300px"
-
+ 
 
     if (playerPoints > computerPoints)
     {
