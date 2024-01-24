@@ -38,17 +38,17 @@ bet.addEventListener("click", function () {
 }
 
 
-function afficherMessage() {
-    const resultMessage = document.getElementById("resultMessage");
+// function afficherMessage() {
+//     const resultMessage = document.getElementById("resultMessage");
 
-    if (estGagnant) {
-        resultMessage.innerHTML = "Congratulations! You are the winner!";
-    } else {
-        resultMessage.innerHTML = "Looooooooser!";
-    }
-}
-const estGagnant = declarerWinner();
-afficherMessage(estGagnant);
+//     if (estGagnant) {
+//         resultMessage.innerHTML = "Congratulations! You are the winner!";
+//     } else {
+//         resultMessage.innerHTML = "Looooooooser!";
+//     }
+// }
+// const estGagnant = declarerWinner();
+// afficherMessage(estGagnant);
 
 
 

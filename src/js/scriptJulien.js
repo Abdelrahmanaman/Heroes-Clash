@@ -123,7 +123,7 @@ async function recuperateComputer() {
     const comPower = document.getElementById("com-power");
 
     if (powerStatsSelect.selectedIndex !== 0) {
-      const randomIndex = Math.floor(Math.random() * computerSelection.length);
+      //const randomIndex = Math.floor(Math.random() * computerSelection.length);
       const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
       const result = await fetch(url);
       const resp = await result.json();
@@ -135,6 +135,7 @@ async function recuperateComputer() {
       const playerPowerstats = JSON.parse(localStorage.getItem("powerstats"));
       const powerStatsSelect = document.getElementById("powerStats-select");
       const selectedPowerStat = powerStatsSelect.value;
+      localStorage.setItem("selectedPowerStatPlayer", selectedPowerStat)
 
       //* Set the selected power stat for the computer
       const computerPowerStatsSelect = document.getElementById("-comp-powerStats");
@@ -149,23 +150,24 @@ async function recuperateComputer() {
       comPower.textContent = `Power: ${resp.powerstats.power}`;
 
       //* Compare power stats and declare the winner
-      const playerPowerStatValue = parseInt(playerPowerstats[selectedPowerStat]);
+      let playerPowerStatValue = parseInt(playerPowerstats[selectedPowerStat]);
       const computerPowerStatValue = parseInt(resp.powerstats[selectedPowerStat]);
 
       //* Replace this with your own logic to declare the winner
       if (playerPowerStatValue > computerPowerStatValue) {
         console.log(`Player: ${playerPowerStatValue} WINS & Computer:${computerPowerStatValue}`);
-        return(playerPowerStatValue)
+        localStorage.setItem("winnerRound", "player")
       } else if (playerPowerStatValue === computerPowerStatValue) {
         console.log(`Player: ${playerPowerStatValue} & Computer:${computerPowerStatValue} TIE`);
+        localStorage.setItem("winnerRound", "aucun")
       } else {
         console.log(`Player: ${playerPowerStatValue} & Computer:${computerPowerStatValue} Wins`);
-        return(computerPowerStatValue)
+        localStorage.setItem("winnerRound", "computer")
       }
     } else {
       console.error("Aucun personnage sélectionné.");
     }
-    return(selectedPowerStat)
+    // return(selectedPowerStat)
   } catch (error) {
     console.log("Erreur lors de la récupération du personnage", error);
   }

@@ -115,15 +115,23 @@ function declarerWinner () {
         else
         {
         coinValue.textContent = coin;
-        
         }
     }
     else
     {
         console.log("Computer est vainqueur")
+        messageWinner.classList.replace("messageWinnerHidden", "messageWinner")
         resultMessage.innerHTML = "Looooooooser!";
 
     }
+
+    localStorage.removeItem("selectedPowerStatPlayer")
+    localStorage.removeItem("winnerRound")
+    localStorage.removeItem("powerstatsComp")
+    localStorage.removeItem("powerstats")
+    localStorage.removeItem("playerImg")
+    localStorage.removeItem("playerId")
+
 }
 
 
@@ -134,20 +142,20 @@ function declarerWinner () {
 
 //***********************************  Function Changer de Round à l'issue du combat *****************************//
 
-let powerStatPlayerRoundOne = selectedPowerStat
-if (playerPowerStatValue) { 
-    winnerRound= "player"
-}
-else {
-    winnerRound = "computer"
-}
+
 
 
 
 function changeRound(i) {
+    let powerStatPlayerRound = localStorage.getItem("selectedPowerStatPlayer")
+console.log(powerStatPlayerRound)
+// let powerStatPlayerRound = "intelligence"
+
+let winnerRoundIs =  localStorage.getItem("winnerRound")
+console.log(winnerRoundIs)
     if (i < 3) {
-        roundWinner(winnerRound)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
-        updateSelectList(powerStatPlayerRoundOne) ////winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        roundWinner(winnerRoundIs)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        updateSelectList(powerStatPlayerRound) ////winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
         roundTitle(i += 1)
         console.log(i)
         numRound += 1
@@ -158,7 +166,7 @@ function changeRound(i) {
 
     if (i = 3)
     {
-        roundWinner(winnerRound)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
+        roundWinner(winnerRoundIs)  //winnerRound --> variable adressé par le script de julien ou à récupérer dans le local Storage ?
         declarerWinner()
     }
 }
