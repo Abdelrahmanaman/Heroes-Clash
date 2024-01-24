@@ -1,74 +1,3 @@
-
-
-
-
-// //* Retrieving the img selected in the selection page and bringing it to the game page//
-const selectedPlayerImg = localStorage.getItem('playerImg');
-const playerImg = document.getElementById("player-img")
-if (selectedPlayerImg) {
-  playerImg.src = selectedPlayerImg;
-} else {
-  console.error('Selected superhero image URL not found in localStorage.');
-}
-
-
-const apiKey = 1069157230869552
-const superheroIds = [149, 289, 70, 485, 310, 265, 644, 389, 222, 717, 332, 216];
-const superheroImg = document.querySelectorAll("#superhero-img") //* 12 grid img container simulation 
-const imgTest = document.getElementById("displayed-hero") //*Selected Img
-const compDisplay = document.getElementById("computer-display") //* Computer selected Img
-const bet = document.getElementById("btnBet") //*Button simulation 
-let superheroData = []; //* an empty array to save the object instead recalling the api over and over
-let alive = false
-let coin = 100
-let intelligence = document.getElementById("intelligence")
-let power = document.getElementById("power")
-let durability = document.getElementById("durability")
-let speed = document.getElementById("speed")
-let combat = document.getElementById("combat")
-let strength = document.getElementById("strength")
-let comIntelligence = document.getElementById("com-intelligence")
-let comPower = document.getElementById("com-power")
-let comDurability = document.getElementById("com-durability")
-let comSpeed = document.getElementById("com-speed")
-let comCombat = document.getElementById("com-combat")
-let comStrength = document.getElementById("strength")
-const fightBtn = document.getElementById("btnFight")
-const selectedId = parseInt(localStorage.getItem("playerId"))
-const computerSelection = superheroIds.filter((id) => id !== selectedId)
-
-fightBtn.addEventListener("click", recuperateComputer, GameStart)
-async function recuperateComputer() {
-  try {
-    const computerImg = document.getElementById("computer-img");
-    if (computerImg) {
-      const randomIndex = Math.floor(Math.random() * computerSelection.length);
-      const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
-      const result = await fetch(url);
-      const resp = await result.json();
-      computerImg.src = resp.image.url;
-      comIntelligence.textContent = `Intelligence: ${resp.powerstats.intelligence}`
-      comSpeed.textContent = `Speed: ${resp.powerstats.speed}`
-      comCombat.textContent = `Combat: ${resp.powerstats.combat}`
-      comStrength.textContent = `Strength: ${resp.powerstats.strength}`
-      comDurability.textContent = `durability: ${resp.powerstats.durability}`
-      comPower.textContent = `Power: ${resp.powerstats.power}`
-
-
-    } else {
-      console.error("Aucun personnage sélectionné.");
-    }
-  } catch (error) {
-    console.log("Erreur lors de la récupération du personnage", error);
-  }
-
-}
-intelligence.textContent = `Intelligence: ${powerstats.intelligence}`
-strength.textContent = `Strength: ${powerstats.strength}`
-speed.textContent = `Speed: ${powerstats.speed}`
-durability.textContent = `Durability: ${powerstats.durability}`
-power.textContent = `Power: ${powerstats.power}`
-
 //* fetching the Api function 
 async function getSuperheroes() {
   try {
@@ -122,25 +51,101 @@ getSuperheroes()
 
 
 
+// //* Retrieving the img selected in the selection page and bringing it to the game page//
+const selectedPlayerImg = localStorage.getItem('playerImg');
+const playerImg = document.getElementById("player-img")
+if (selectedPlayerImg) {
+  playerImg.src = selectedPlayerImg;
+} else {
+  console.error('Selected superhero image URL not found in localStorage.');
+}
+
+
+const apiKey = 1069157230869552
+const superheroIds = [149, 289, 70, 485, 310, 265, 644, 389, 222, 717, 332, 216];
+const superheroImg = document.querySelectorAll("#superhero-img") //* 12 grid img container simulation 
+const imgTest = document.getElementById("displayed-hero") //*Selected Img
+const compDisplay = document.getElementById("computer-display") //* Computer selected Img
+const bet = document.getElementById("btnBet") //*Button simulation 
+let superheroData = []; //* an empty array to save the object instead recalling the api over and over
+let alive = false
+let coin = 100
+let intelligence = document.getElementById("intelligence")
+let power = document.getElementById("power")
+let durability = document.getElementById("durability")
+let speed = document.getElementById("speed")
+let combat = document.getElementById("combat")
+let strength = document.getElementById("strength")
+let comIntelligence = document.getElementById("com-intelligence")
+let comPower = document.getElementById("com-power")
+let comDurability = document.getElementById("com-durability")
+let comSpeed = document.getElementById("com-speed")
+let comCombat = document.getElementById("com-combat")
+let comStrength = document.getElementById("strength")
+const fightBtn = document.getElementById("btnFight")
+const selectedId = parseInt(localStorage.getItem("playerId"))
+const computerSelection = superheroIds.filter((id) => id !== selectedId)
+
+
 const powerStatsSt = localStorage.getItem("powerstats") //* A string of an object
 const powerstats = JSON.parse(powerStatsSt)  //*Changing the string to an object to use the powerstats
 
 const selectedPlayerId = localStorage.getItem("playerId")
 
-//Update menu with API (powerstats) values
+intelligence.textContent = `Intelligence: ${powerstats.intelligence}`
+strength.textContent = `Strength: ${powerstats.strength}`
+speed.textContent = `Speed: ${powerstats.speed}`
+durability.textContent = `Durability: ${powerstats.durability}`
+power.textContent = `Power: ${powerstats.power}`
 
-let selectedStat = false
 
-function GameStart() {
-  console.log('coucouc')
-  let selectPowerStat = document.getElementById("powerStats-select").value
-  if (selectPowerStat) {
-    console.log("fight")
-    selectedStat = true
 
-    if (selectedStat === true) {
 
+async function recuperateComputer() {
+  try {
+    const computerImg = document.getElementById("computer-img");
+    if (computerImg) {
+      const randomIndex = Math.floor(Math.random() * computerSelection.length);
+      const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
+      const result = await fetch(url);
+      const resp = await result.json();
+      computerImg.src = resp.image.url;
+      comIntelligence.textContent = `Intelligence: ${resp.powerstats.intelligence}`
+      comSpeed.textContent = `Speed: ${resp.powerstats.speed}`
+      comCombat.textContent = `Combat: ${resp.powerstats.combat}`
+      comStrength.textContent = `Strength: ${resp.powerstats.strength}`
+      comDurability.textContent = `durability: ${resp.powerstats.durability}`
+      comPower.textContent = `Power: ${resp.powerstats.power}`
+    } else {
+      console.error("Aucun personnage sélectionné.");
     }
+  } catch (error) {
+    console.log("Erreur lors de la récupération du personnage", error);
+  }  
+}
+fightBtn.addEventListener("click", recuperateComputer)
+
+function CompareStats() {
+  console.log("coucou")
+  let selectPowerStat = document.getElementById("powerStats-select").value
+  console.log(selectPowerStat)
+  let selectedStat = false
+  let compStats = document.getElementById("comp-powerStats").value
+  console.log()
+  compStats.value = selectPowerStat.value 
+  console.log("radnom")
+  if (selectPowerStat) {
+    console.log("hello")
+    console.log("hello2")
+    compStats = selectPowerStat.value
+    console.log(compStats)
+  }
+  if(selectPowerStat > compStats) {
+    alert("round gagné")
+  }
+  if (selectPowerStat < compStats) {
+    alert("round perdu")
   }
 }
 
+fightBtn.addEventListener("click", CompareStats)
