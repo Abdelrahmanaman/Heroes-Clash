@@ -14,7 +14,7 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 100
+let coin = 50000
 let intelligence = document.getElementById("intelligence")
 let power = document.getElementById("power")
 let durability = document.getElementById("durability")
@@ -69,11 +69,11 @@ async function getSuperheroes() {
   
       }
       //* Generating a random Img and intailizing the game *//
-      bet.addEventListener("click", function () {
-        // location.href = "game.html"
-      });
+      // bet.addEventListener("click", function () {
+      //   location.href = "game.html"
+      // });
     } catch (error) {
-      // console.error(`Error: ${error}`);
+      console.error(`Error: ${error}`);
     }
   }
   getSuperheroes()
