@@ -94,11 +94,14 @@ function updateSelectList (usedValuePreviousRound) {
 
 function declarerWinner () {
     console.log(localStorage.getItem("bet"))
+    const messageWinner = document.querySelector(".messageWinnerHidden");
+    console.log(messageWinner)
     const resultMessage = document.getElementById("resultMessage");
 
     if (playerPoints > computerPoints)
     {
         console.log("Player est vainqueur")
+        messageWinner.classList.replace("messageWinnerHidden", "messageWinner")
         resultMessage.innerHTML = "Congratulations! You are the winner!";
         coin = coin + 2*(localStorage.getItem("bet"))
         console.log(coin)
@@ -131,7 +134,7 @@ function declarerWinner () {
 
 //***********************************  Function Changer de Round à l'issue du combat *****************************//
 
-let powerStatPlayerRoundOne = "intelligence"
+let powerStatPlayerRoundOne = "speed"
 let winnerRound = "player"
 
 
