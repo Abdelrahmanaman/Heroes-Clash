@@ -14,13 +14,14 @@ const compDisplay = document.getElementById("computer-display") //* Computer sel
 const bet = document.getElementById("btnBet") //*Button simulation 
 let superheroData = []; //* an empty array to save the object instead recalling the api over and over
 let alive = false
-let coin = 100
+let coin = 50000
 let intelligence = document.getElementById("intelligence")
 let power = document.getElementById("power")
 let durability = document.getElementById("durability")
 let speed = document.getElementById("speed")
 let combat = document.getElementById("combat")
 let strength = document.getElementById("strength")
+const fightBtn = document.getElementById("btnFight")
 
         
 
@@ -68,11 +69,11 @@ async function getSuperheroes() {
   
       }
       //* Generating a random Img and intailizing the game *//
-      bet.addEventListener("click", function () {
-        // location.href = "game.html"
-      });
+      // bet.addEventListener("click", function () {
+      //   location.href = "game.html"
+      // });
     } catch (error) {
-      // console.error(`Error: ${error}`);
+      console.error(`Error: ${error}`);
     }
   }
   getSuperheroes()
@@ -165,45 +166,12 @@ async function getSuperheroes() {
   
   const randomIndex = Math.floor(Math.random() * computerSelection.length);
 
-/*****************Valentin********** */
 
-const betInput = document.getElementById("input-bet");
-  const btnBet = document.getElementById("btnBet");
-  const coinValue = document.getElementById("coin");
-
-  coin = parseInt(localStorage.getItem("coin")) 
-  coinValue.textContent = coin;
-
-  btnBet.addEventListener("click", function () {
-    const input = parseInt(betInput.value);
-
-    if (input > coin || coin === 0) {
-      console.log("Vous n'avez pas assez d'argent !");
-    } else {
-      coin -= input;
-      coinValue.textContent = coin;
-      localStorage.setItem("coin", coin);
-      window.location.href = "game.html";
-    }
-  });
+ 
 
 
-// async function recuperateComputer() {
-//   try {
-//     const computerImg = document.getElementById("computer-img");
-//     if (computerImg) {
-//       const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
-//       const result = await fetch(url);
-//       const resp = await result.json();
-//       computerImg.src = resp.image.url;
-//     } else {
-//       console.error("Aucun personnage sélectionné.");
-//     }
-//   } catch (error) {
-//     console.log("Erreur lors de la récupération du personnage", error);
-//   }
-// }
-//* Setting a to save the player ID to local storage
+
+
 const selectedPlayerId = localStorage.getItem("playerId")
 
 

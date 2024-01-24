@@ -1,35 +1,29 @@
+let coin = parseInt(localStorage.getItem("coin")) || 100;
+document.getElementById("coin").innerHTML = coin;
 const betInput = document.getElementById("input-bet");
-  const btnBet = document.getElementById("btnBet");
-  const coinValue = document.getElementById("coin");
+const coinValue = document.getElementById("coin");
+const bet = document.getElementById("btnBet")
 
-  coin = parseInt(localStorage.getItem("coin")) 
-  coinValue.textContent = coin;
-
-  btnBet.addEventListener("click", function () {
+bet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
 
     if (input > coin || coin === 0) {
-      console.log("Vous n'avez pas assez d'argent !");
+        console.log("Vous n'avez pas assez d'argent !");
     } else {
-      coin -= input;
-      coinValue.textContent = coin;
-      localStorage.setItem("coin", coin);
-      window.location.href = "game.html";
+        coin -= input;
+        coinValue.textContent = coin;
+
+        localStorage.setItem("coin", coin);
+
+        window.location.href = "game.html";
     }
-  });
-  // async function recuperateComputer() {
-//   try {
-//     const computerImg = document.getElementById("computer-img");
-//     if (computerImg) {
-//       const url = `https://superheroapi.com/api/${apiKey}/${computerSelection[randomIndex]}`;
-//       const result = await fetch(url);
-//       const resp = await result.json();
-//       computerImg.src = resp.image.url;
-//     } else {
-//       console.error("Aucun personnage sélectionné.");
-//     }
-//   } catch (error) {
-//     console.log("Erreur lors de la récupération du personnage", error);
+});
+
+// const selectedPlayerImg = localStorage.getItem('playerImg');
+//   const playerImg = document.getElementById("player-img")
+//   if (selectedPlayerImg) {
+//     playerImg.src = selectedPlayerImg;
+//   } else {
+//     console.error('Selected superhero image URL not found in localStorage.');
 //   }
-// }
-//* Setting a to save the player ID to local storage
+
