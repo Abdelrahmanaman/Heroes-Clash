@@ -1,0 +1,100 @@
+.searchZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectedHero-search {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.selectedHeroSup {
+    margin: 0 50px !important;
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1em;
+    margin: 50px !important;
+}
+
+.selectedHero-player-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #252D42;
+    border-radius: 20px;
+    background-color: white;
+    /* border: none; */
+}
+
+/* #search {
+    border: 2px solid #252D42;
+    border-radius: 10px;
+    text-align: center;
+} */
+
+.searchLauncher {
+    margin-top: 20px !important;
+}
+
+#inputSearch {
+    border: 2px solid #252D42;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#btnSearch {
+    color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1.2em;
+    border: 2px solid #252D42;
+    border-radius: 30px;
+    transform: scale(1);
+    transition: all 1000ms ease;
+    padding: 5px !important;
+}
+
+#btnSearch:hover {
+    color: white;
+    background-color: #252D42;
+    border: 2px solid white;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
+#addSuperHero {
+    color: white;
+    background-color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#addSuperHero:hover {
+    color: #252D42;
+    background-color: white;
+    border: 2px solid #252D42;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
+.linkHeader {
+    text-decoration: none;
+    color: white;
+    margin-right: 30px !important;
+}
