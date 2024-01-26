@@ -98,3 +98,9 @@
     color: white;
     margin-right: 30px !important;
 }
+body{
+    background-image: url(img_background.png);
+    height: 120vh;
+    background-position: center;
+    background-size: cover;
+}
