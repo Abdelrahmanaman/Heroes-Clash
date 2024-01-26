@@ -22,6 +22,7 @@ for (i=0; i< resp.results.length; i++)
     let selectedHero = document.querySelector(".selectedHero-search")
     let selectedHeroSup = document.createElement("div")
     selectedHeroSup.classList.add("selectedHeroSup")
+    let id = resp.results[i].id
     
     selectedHeroSup.innerHTML = 
     `
@@ -29,7 +30,7 @@ for (i=0; i< resp.results.length; i++)
             <img id="displayed-hero${i}" class="selectedHero-player-img selectedHero-player1-img" src="../assets/img/unknown.png"
             alt="Image Hero" />
             <p id="nameHero${i}" style="-webkit-text-stroke: 1px #252D42; font-size: 2em; color: white"></p>
-            <button id="detailsSuperHero" title="Accéder aux détails des SuperHeros">+</button>
+            <button id="detailsSuperHero" title="Accéder aux détails des SuperHeros" onclick="displayDetails(${id})">+</button>
             <div class="selectedHero-player-powerStats selectedHero-player1-powerStats">
                 
                 <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste1">
@@ -74,11 +75,35 @@ async function recuperateAPI() {
     const apiKey = 1069157230869552
     const url = `https://superheroapi.com/api/${apiKey}/`
 
-const result = await fetch(url)
-const resp = await result.json()
-console.log(resp)
+    const result = await fetch(url)
+    const resp = await result.json()
+    console.log(resp)
 }
 
 
 
+async function displayDetails(param) {
+    const apiKey = 1069157230869552
+    const url = `https://superheroapi.com/api/${apiKey}/${param}`
+    const result = await fetch(url)
+    const resp = await result.json()
+    console.log(resp)
+
+    let nameH = resp.name
+    let raceH = resp.apparence.genre
+    let genreH = resp.apparence.genre
+    let heightH = resp.apparence.height[1]
+    let weightH = resp.apparence.weight
+    let intelligence = resp.powerstats.intelligence
+    let strength = resp.powerstats.strength
+    let speed = resp.powerstats.speed
+    let durability = resp.powerstats.durability
+    let power = resp.powerstats.power
+    let combat = resp.powerstats.combat
+    let fullName = resp.biography.full-name
+    // let alterEgos = resp.biography.alterd-egos
+    let aliasesH = resp.aliases
+    let occupationH = resp.work.occupation
+    let baseH = resp.work.base
+}
 
