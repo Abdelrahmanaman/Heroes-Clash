@@ -43,6 +43,9 @@ for (i=0; i< resp.results.length; i++)
                     <li id="combat${i}">Combat : </li>
                 </ul>
             </div>
+            <div>
+                >
+            </div>
         </div>
     `
     
