@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hereos Clash - Combats">
+    <title>Hereos Clash - Combats </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/img/flash-black.ico" type="image/x-icon">
+    <!-- lien css -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/selection.css">
+    <link rel="stylesheet" href="./css/test.css">
+    <!-- lien pour utilisation bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+        defer></script>
+    <script src="js/test.js" defer></script>       
+</head>
+
+<body>
+    <div class="fullscreen">
+        <header>
+            <div class="header">
+                <div class="header-img_title">
+                    <a href="home.html">
+                        <img src="../assets/img/flash-white.png" alt="Logo Hereos Clash" class="header-img_title-img">
+                    </a>
+                    <p class="header-img_title-title">Heroes Clash</p>
+                </div>
+                <div class="header-money">
+                    <a href="myHeros.html" class="linkHeader">Mes Supers Héros</a>
+                    <p class="header-money-dollar">$</p>
+                    <p class="header-money-amount" id="coin"></p>
+                </div>
+            </div>
+        </header>
+        <main class="container-main">
+            <div class="searchZone">
+                <p class="selectedHero-VS">Recherche par nom</p> 
+                <div>
+                    <input id="inputSearch" type="text" aria-label="Zone de recherche par le nom">
+                </div>
+                <div class="searchLauncher">
+                    <button id="btnSearch" onclick="recuperateAPI_ByName()">Rechercher</button>
+                </div>
+            </div>
+            <div class="selectedHero-search">
+                <!-- <div class="selectedHero-player">
+                    <img id="displayed-hero" class="selectedHero-player-img selectedHero-player1-img" src="../assets/img/unknown.png"
+                        alt="Image Hero" />
+                    <div class="selectedHero-player-powerStats selectedHero-player1-powerStats">
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste1">
+                            <li id="intelligence">Intelligence : </li>
+                            <li id="strength">Strength : </li>
+                            <li id="speed">Speed : </li>
+                        </ul>
+                        <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste2">
+                            <li id="durability">Durability : </li>
+                            <li id="power">Power : </li>
+                            <li id="combat">Combat : </li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>    
+               
+        </main>
+    </div>
+</body>
+</html>
