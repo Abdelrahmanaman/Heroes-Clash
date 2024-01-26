@@ -99,11 +99,11 @@ function declarerWinner () {
 
     if (playerPoints > computerPoints)
     {
-        console.log("Player est vainqueur")
+        // console.log("Player est vainqueur")
         messageWinner.classList.replace("messageWinnerHidden", "messageWinner")
         resultMessage.innerHTML = "Congratulations! You are the winner!";
         coin = coin + 2*(localStorage.getItem("bet"))
-        console.log(coin)
+        // console.log(coin)
         localStorage.setItem("coin", coin)
         if (parseInt(localStorage.getItem("coin")))
         {
@@ -118,7 +118,7 @@ function declarerWinner () {
     }
     else
     {
-        console.log("Computer est vainqueur")
+        // console.log("Computer est vainqueur")
         messageWinner.classList.replace("messageWinnerHidden", "messageWinner")
         resultMessage.innerHTML = "Looooooooser!";
 
@@ -147,7 +147,7 @@ function declarerWinner () {
 
 function changeRound(i) {
     let powerStatPlayerRound = localStorage.getItem("selectedPowerStatPlayer")
-console.log(powerStatPlayerRound)
+// console.log(powerStatPlayerRound)
 // let powerStatPlayerRound = "intelligence"
 
 let winnerRoundIs =  localStorage.getItem("winnerRound")
