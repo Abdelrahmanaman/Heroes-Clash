@@ -1,12 +1,8 @@
-
-
 coin = parseInt(localStorage.getItem("coin")) || 500
 document.getElementById("coin").innerHTML = coin
 const betInput = document.getElementById("input-bet")
 const coinValue = document.getElementById("coin")
-// const betInput = document.getElementById("input-bet");
-// const btnBet = document.getElementById("btnBet");
-// const coinValue = document.getElementById("coin");
+
 
 if (parseInt(localStorage.getItem("coin")))
 {
@@ -36,19 +32,3 @@ bet.addEventListener("click", function () {
     }
 })
 }
-
-
-// function afficherMessage() {
-//     const resultMessage = document.getElementById("resultMessage");
-
-//     if (estGagnant) {
-//         resultMessage.innerHTML = "Congratulations! You are the winner!";
-//     } else {
-//         resultMessage.innerHTML = "Looooooooser!";
-//     }
-// }
-// const estGagnant = declarerWinner();
-// afficherMessage(estGagnant);
-
-
-
