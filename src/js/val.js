@@ -22,17 +22,32 @@ if (bet) {
 bet.addEventListener("click", function () {
     const input = parseInt(betInput.value);
 
-    if (!input) {
-        console.log("Vous n'avez pas misé");
-    } else if (input > coin || coin === 0) {
-        console.log("Vous n'avez pas assez d'argent !")
-    } else {
-        coin -= input;
-        coinValue.textContent = coin
-        localStorage.setItem("bet", input)
-        localStorage.setItem("coin", coin)
+    if (!localStorage.getItem("playerImg"))
+    {
+        console.log("Vous n'avez pas sélectionner de joueur")
+        alert("Vous n'avez pas sélectionner de joueur")
+    }
+    else 
+    {
+        if (!input)
+        {
+            console.log("Vous n'avez pas misé");
+            alert("Vous n'avez pas misé")
+        } 
+        else if (input > coin || coin === 0) 
+        {
+            console.log("Vous n'avez pas assez d'argent !")
+            alert("Vous n'avez pas assez d'argent !")
+        } 
+        else 
+        {
+            coin -= input;
+            coinValue.textContent = coin
+            localStorage.setItem("bet", input)
+            localStorage.setItem("coin", coin)
         
-        window.location.href = "game.html"
+            window.location.href = "game.html"
+        }
     }
 })
 }
