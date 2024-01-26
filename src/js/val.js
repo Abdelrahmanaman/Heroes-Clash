@@ -20,8 +20,8 @@ bet.addEventListener("click", function () {
 
     if (!localStorage.getItem("playerImg"))
     {
-        console.log("Vous n'avez pas sélectionner de joueur")
-        alert("Vous n'avez pas sélectionner de joueur")
+        console.log("Vous n'avez pas sélectionné de joueur")
+        alert("Vous n'avez pas sélectionné de joueur")
     }
     else 
     {

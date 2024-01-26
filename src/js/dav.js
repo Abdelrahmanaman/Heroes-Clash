@@ -10,7 +10,6 @@ let computerPoints = 0
 
 let numRound = 1
 
-
 //***********************************  Function to trigger the rounds color results *****************************//
 
 //* Fonction Test

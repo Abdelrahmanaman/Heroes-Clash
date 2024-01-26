@@ -81,6 +81,7 @@
     height: 30px;
     border: 2px solid #252D42;
     border-radius: 50%;
+    margin-bottom: 10px !important;
     transform: scale(1);
     transition: all 1000ms ease;
 }
@@ -93,11 +94,34 @@
     transition: all 1000ms ease;
 }
 
+#detailsSuperHero {
+    color: white;
+    background-color: #252D42;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #252D42;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 1000ms ease;
+}
+
+#detailsSuperHero:hover {
+    color: #252D42;
+    background-color: white;
+    border: 2px solid #252D42;
+    transform: scale(1.5);
+    transition: all 1000ms ease;
+}
+
 .linkHeader {
     text-decoration: none;
     color: white;
     margin-right: 30px !important;
 }
+
 body{
     background-image: url(img_background.png);
     height: 120vh;

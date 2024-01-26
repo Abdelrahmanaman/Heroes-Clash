@@ -29,7 +29,7 @@ for (i=0; i< resp.results.length; i++)
             <img id="displayed-hero${i}" class="selectedHero-player-img selectedHero-player1-img" src="../assets/img/unknown.png"
             alt="Image Hero" />
             <p id="nameHero${i}" style="-webkit-text-stroke: 1px #252D42; font-size: 2em; color: white"></p>
-            <button id="addSuperHero" title="Ajouter à ma liste de SuperHeros">+</button>
+            <button id="detailsSuperHero" title="Accéder aux détails des SuperHeros">+</button>
             <div class="selectedHero-player-powerStats selectedHero-player1-powerStats">
                 
                 <ul class="selectedHero-player-powerStats-list selectedHero-player-powerStats-liste1">
@@ -43,9 +43,7 @@ for (i=0; i< resp.results.length; i++)
                     <li id="combat${i}">Combat : </li>
                 </ul>
             </div>
-            <div>
-                >
-            </div>
+            <button id="addSuperHero" title="Ajouter à ma liste de SuperHeros">>></button>
         </div>
     `
     
